@@ -1,0 +1,33 @@
+2014-08-13 17:30:48,660 [10124] - 
+当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'T_TransportationRemark' 中的标识列插入显式值。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllTransportation.Add_Transportation(T_Transportation entity, T_TransportationRemark remarkEntiy) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllTransportation.cs:行号 43
+
+2014-08-13 20:08:48,869 [12704] - 
+不能将值 NULL 插入列 'TransportationId'，表 'wokee.dbo.T_TransportationRemark'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllTransportation.AddTransportationRemark(T_TransportationRemark entity) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllTransportation.cs:行号 348
+

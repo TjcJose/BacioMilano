@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8C7391D-0890-42EF-ACC2-03BEDAA34E7E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BM.Web</RootNamespace>
+    <AssemblyName>BM.WebAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SysController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.ext.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\change.css" />
+    <Content Include="Content\change.min.css" />
+    <Content Include="Content\datePicker.gif" />
+    <Content Include="Content\font-awesome-ie7.css" />
+    <Content Include="Content\font-awesome-ie7.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Site.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="plugin\artDialog\artDialog.js" />
+    <Content Include="plugin\artDialog\artDialog.source.js" />
+    <Content Include="plugin\artDialog\jquery.artDialog.js" />
+    <Content Include="plugin\artDialog\jquery.artDialog.source.js" />
+    <Content Include="plugin\artDialog\license.txt" />
+    <Content Include="plugin\artDialog\plugins\iframeTools.js" />
+    <Content Include="plugin\artDialog\plugins\iframeTools.source.js" />
+    <Content Include="plugin\artDialog\skins\aero.css" />
+    <Content Include="plugin\artDialog\skins\aero\aero_s.png" />
+    <Content Include="plugin\artDialog\skins\aero\aero_s2.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_close.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_e.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_n.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_ne.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_nw.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_s.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_se.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_sw.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="plugin\artDialog\skins\aero\ie6\aui_w.png" />
+    <Content Include="plugin\artDialog\skins\black.css" />
+    <Content Include="plugin\artDialog\skins\black\bg.png" />
+    <Content Include="plugin\artDialog\skins\black\bg2.png" />
+    <Content Include="plugin\artDialog\skins\black\bg_css3.png" />
+    <Content Include="plugin\artDialog\skins\black\bg_css3_2.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\close.hover.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\close.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\e.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\n.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\ne.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\nw.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\s.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\se.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\sw.png" />
+    <Content Include="plugin\artDialog\skins\black\ie6\w.png" />
+    <Content Include="plugin\artDialog\skins\blue.css" />
+    <Content Include="plugin\artDialog\skins\blue\bg.png" />
+    <Content Include="plugin\artDialog\skins\blue\bg2.png" />
+    <Content Include="plugin\artDialog\skins\blue\bg_css3.png" />
+    <Content Include="plugin\artDialog\skins\blue\bg_css3_2.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\close.hover.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\close.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\e.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\n.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\ne.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\nw.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\s.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\se.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\sw.png" />
+    <Content Include="plugin\artDialog\skins\blue\ie6\w.png" />
+    <Content Include="plugin\artDialog\skins\chrome.css" />
+    <Content Include="plugin\artDialog\skins\chrome\border.png" />
+    <Content Include="plugin\artDialog\skins\chrome\chrome_s.png" />
+    <Content Include="plugin\artDialog\skins\default.css" />
+    <Content Include="plugin\artDialog\skins\green.css" />
+    <Content Include="plugin\artDialog\skins\green\bg.png" />
+    <Content Include="plugin\artDialog\skins\green\bg2.png" />
+    <Content Include="plugin\artDialog\skins\green\bg_css3.png" />
+    <Content Include="plugin\artDialog\skins\green\bg_css3_2.png" />
+    <Content Include="plugin\artDialog\skins\green\color_bg.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\close.hover.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\close.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\e.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\n.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\ne.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\nw.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\s.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\se.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\sw.png" />
+    <Content Include="plugin\artDialog\skins\green\ie6\w.png" />
+    <Content Include="plugin\artDialog\skins\icons\error.png" />
+    <Content Include="plugin\artDialog\skins\icons\face-sad.png" />
+    <Content Include="plugin\artDialog\skins\icons\face-smile.png" />
+    <Content Include="plugin\artDialog\skins\icons\loading.gif" />
+    <Content Include="plugin\artDialog\skins\icons\question.png" />
+    <Content Include="plugin\artDialog\skins\icons\succeed.png" />
+    <Content Include="plugin\artDialog\skins\icons\warning.png" />
+    <Content Include="plugin\artDialog\skins\idialog.css" />
+    <Content Include="plugin\artDialog\skins\idialog\idialog_s.png" />
+    <Content Include="plugin\artDialog\skins\idialog\idialog_s2.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_close.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_e.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_n.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_s.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_se.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="plugin\artDialog\skins\idialog\ie6\aui_w.png" />
+    <Content Include="plugin\artDialog\skins\opera.css" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_close.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_e.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_n.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_ne.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_nw.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_s.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_se.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_sw.png" />
+    <Content Include="plugin\artDialog\skins\opera\ie6\aui_w.png" />
+    <Content Include="plugin\artDialog\skins\opera\s1.png" />
+    <Content Include="plugin\artDialog\skins\opera\s2.png" />
+    <Content Include="plugin\artDialog\skins\simple.css" />
+    <Content Include="plugin\artDialog\skins\twitter.css" />
+    <Content Include="plugin\kindeditor\kindeditor-all-min.js" />
+    <Content Include="plugin\kindeditor\kindeditor-all.js" />
+    <Content Include="plugin\kindeditor\kindeditor-min.js" />
+    <Content Include="plugin\kindeditor\kindeditor.js" />
+    <Content Include="plugin\kindeditor\lang\ar.js" />
+    <Content Include="plugin\kindeditor\lang\en.js" />
+    <Content Include="plugin\kindeditor\lang\ko.js" />
+    <Content Include="plugin\kindeditor\lang\zh_CN.js" />
+    <Content Include="plugin\kindeditor\lang\zh_TW.js" />
+    <Content Include="plugin\kindeditor\license.txt" />
+    <Content Include="plugin\kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="plugin\kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="plugin\kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="plugin\kindeditor\plugins\baidumap\index.html" />
+    <Content Include="plugin\kindeditor\plugins\baidumap\map.html" />
+    <Content Include="plugin\kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="plugin\kindeditor\plugins\code\code.js" />
+    <Content Include="plugin\kindeditor\plugins\code\prettify.css" />
+    <Content Include="plugin\kindeditor\plugins\code\prettify.js" />
+    <Content Include="plugin\kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="plugin\kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="plugin\kindeditor\plugins\flash\flash.js" />
+    <Content Include="plugin\kindeditor\plugins\image\image.js" />
+    <Content Include="plugin\kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="plugin\kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="plugin\kindeditor\plugins\link\link.js" />
+    <Content Include="plugin\kindeditor\plugins\map\map.html" />
+    <Content Include="plugin\kindeditor\plugins\map\map.js" />
+    <Content Include="plugin\kindeditor\plugins\media\media.js" />
+    <Content Include="plugin\kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="plugin\kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="plugin\kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="plugin\kindeditor\plugins\preview\preview.js" />
+    <Content Include="plugin\kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="plugin\kindeditor\plugins\table\table.js" />
+    <Content Include="plugin\kindeditor\plugins\template\html\1.html" />
+    <Content Include="plugin\kindeditor\plugins\template\html\2.html" />
+    <Content Include="plugin\kindeditor\plugins\template\html\3.html" />
+    <Content Include="plugin\kindeditor\plugins\template\template.js" />
+    <Content Include="plugin\kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="plugin\kindeditor\themes\common\anchor.gif" />
+    <Content Include="plugin\kindeditor\themes\common\blank.gif" />
+    <Content Include="plugin\kindeditor\themes\common\flash.gif" />
+    <Content Include="plugin\kindeditor\themes\common\loading.gif" />
+    <Content Include="plugin\kindeditor\themes\common\media.gif" />
+    <Content Include="plugin\kindeditor\themes\common\rm.gif" />
+    <Content Include="plugin\kindeditor\themes\default\background.png" />
+    <Content Include="plugin\kindeditor\themes\default\default.css" />
+    <Content Include="plugin\kindeditor\themes\default\default.png" />
+    <Content Include="plugin\kindeditor\themes\qq\editor.gif" />
+    <Content Include="plugin\kindeditor\themes\qq\qq.css" />
+    <Content Include="plugin\kindeditor\themes\simple\simple.css" />
+    <Content Include="plugin\My97DatePicker\calendar.js" />
+    <Content Include="plugin\My97DatePicker\lang\en.js" />
+    <Content Include="plugin\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="plugin\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="plugin\My97DatePicker\skin\blue\bg.jpg" />
+    <Content Include="plugin\My97DatePicker\skin\blue\btnbg.jpg" />
+    <Content Include="plugin\My97DatePicker\skin\blue\datepicker.css" />
+    <Content Include="plugin\My97DatePicker\skin\blue\down.jpg" />
+    <Content Include="plugin\My97DatePicker\skin\blue\left.gif" />
+    <Content Include="plugin\My97DatePicker\skin\blue\navLeft.gif" />
+    <Content Include="plugin\My97DatePicker\skin\blue\navRight.gif" />
+    <Content Include="plugin\My97DatePicker\skin\blue\qs.jpg" />
+    <Content Include="plugin\My97DatePicker\skin\blue\right.gif" />
+    <Content Include="plugin\My97DatePicker\skin\blue\up.jpg" />
+    <Content Include="plugin\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="plugin\My97DatePicker\skin\default\datepicker-dev.css" />
+    <Content Include="plugin\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="plugin\My97DatePicker\skin\default\img.gif" />
+    <Content Include="plugin\My97DatePicker\skin\default\img.png" />
+    <Content Include="plugin\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="plugin\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="plugin\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="plugin\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="plugin\My97DatePicker\WdatePicker.js" />
+    <Content Include="plugin\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="plugin\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="plugin\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="plugin\My97DatePicker\开发包\readme.txt" />
+    <Content Include="plugin\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="plugin\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="plugin\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="plugin\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="plugin\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="plugin\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="plugin\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="plugin\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\2.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\3.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\4.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\5.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\6.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\7.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\8.png" />
+    <Content Include="plugin\zTreeStyle\img\diy\9.png" />
+    <Content Include="plugin\zTreeStyle\img\line_conn.gif" />
+    <Content Include="plugin\zTreeStyle\img\loading.gif" />
+    <Content Include="plugin\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="plugin\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="plugin\zTreeStyle\jquery.ztree.all.js" />
+    <Content Include="plugin\zTreeStyle\jquery.ztree.all.min.js" />
+    <Content Include="plugin\zTreeStyle\zTreeStyle.css" />
+    <Content Include="Scripts\ad.js" />
+    <Content Include="Scripts\ad_captcha.js" />
+    <Content Include="Scripts\ad_form.js" />
+    <Content Include="Scripts\ad_select.js" />
+    <Content Include="Scripts\ad_string.js" />
+    <Content Include="Scripts\bootstrap-paginator.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\change.less" />
+    <Content Include="Content\Site.less" />
+    <Content Include="Scripts\doT.min.js.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\iFesion_Admin.pubxml" />
+    <None Include="Properties\PublishProfiles\wokee_Release.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\doT.js" />
+    <Content Include="Scripts\doT.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.ext.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ordercontrol.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\xdate.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Sys_Login.cshtml" />
+    <Content Include="Views\Shared\_TemplateDialog.cshtml" />
+    <Content Include="Views\Sys\Function.cshtml" />
+    <Content Include="Views\Sys\Function_Add.cshtml" />
+    <Content Include="Views\Sys\Function_Modify.cshtml" />
+    <Content Include="Views\Sys\FunOper.cshtml" />
+    <Content Include="Views\Sys\Group.cshtml" />
+    <Content Include="Views\Sys\Group_Add.cshtml" />
+    <Content Include="Views\Sys\Group_Modify.cshtml" />
+    <Content Include="Views\Sys\Group_Right.cshtml" />
+    <Content Include="Views\Sys\Home.cshtml" />
+    <Content Include="Views\Sys\Index.cshtml" />
+    <Content Include="Views\Sys\Manager.cshtml" />
+    <Content Include="Views\Sys\Manager_Add.cshtml" />
+    <Content Include="Views\Sys\Manager_ChangePwd.cshtml" />
+    <Content Include="Views\Sys\Manager_ChangeSelfPwd.cshtml" />
+    <Content Include="Views\Sys\Manager_Group.cshtml" />
+    <Content Include="Views\Sys\Manager_Modify.cshtml" />
+    <Content Include="Views\Sys\Manager_Right.cshtml" />
+    <Content Include="Views\Sys\Menu.cshtml" />
+    <Content Include="Views\Sys\MenuFun.cshtml" />
+    <Content Include="Views\Sys\Menu_Add.cshtml" />
+    <Content Include="Views\Sys\Menu_Modify.cshtml" />
+    <Content Include="Views\Sys\Operation.cshtml" />
+    <Content Include="Views\Sys\Operation_Add.cshtml" />
+    <Content Include="Views\Sys\Operation_Modify.cshtml" />
+    <Content Include="Views\Sys\ViewRightError.cshtml" />
+    <Content Include="Views\User\UserSelect.cshtml" />
+    <Content Include="Views\Sys\MessagePage.cshtml" />
+    <Content Include="Views\User\SelectStaff.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="plugin\kindeditor\attached\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BM.Fw\BM.Fw.csproj">
+      <Project>{223db20b-6cff-48f5-95ef-7942d5fbbdcd}</Project>
+      <Name>BM.Fw</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BM.Model\BM.Model.csproj">
+      <Project>{f223826b-1add-45b4-b459-4e06f78c5824}</Project>
+      <Name>BM.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BM.Tools.Web\BM.Tools.Web.csproj">
+      <Project>{9f089da7-bc4c-4573-8103-9ddbe3061e66}</Project>
+      <Name>BM.Tools.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BM.Tools\BM.Tools.csproj">
+      <Project>{abc6efe2-3804-4e8f-a8d5-61a7951710d8}</Project>
+      <Name>BM.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BM.WebAdminLib\BM.WebAdminLib.csproj">
+      <Project>{4c29daa3-c951-49b9-83ec-39320e54fe05}</Project>
+      <Name>BM.WebAdminLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3349</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64202/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

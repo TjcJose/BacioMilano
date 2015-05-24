@@ -1,0 +1,5 @@
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Fw\obj\Debug\BM.Fw.csprojResolveAssemblyReference.cache
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Fw.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Fw.pdb
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Fw\obj\Debug\BM.Fw.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Fw\obj\Debug\BM.Fw.pdb

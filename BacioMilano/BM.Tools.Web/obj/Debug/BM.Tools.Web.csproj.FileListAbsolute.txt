@@ -1,0 +1,5 @@
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Tools.Web\obj\Debug\BM.Tools.Web.csprojResolveAssemblyReference.cache
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Tools.Web.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Tools.Web.pdb
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Tools.Web\obj\Debug\BM.Tools.Web.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Tools.Web\obj\Debug\BM.Tools.Web.pdb

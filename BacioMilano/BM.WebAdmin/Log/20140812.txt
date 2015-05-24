@@ -1,0 +1,56 @@
+2014-08-12 14:10:44,803 [4876] - 
+当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'T_ReviewType' 中的标识列插入显式值。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllReview.AddReviewType(T_ReviewType entity) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllReview.cs:行号 40
+
+2014-08-12 14:10:52,240 [5428] - 
+当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'T_ReviewType' 中的标识列插入显式值。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllReview.AddReviewType(T_ReviewType entity) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllReview.cs:行号 40
+
+2014-08-12 14:11:36,007 [4708] - 
+当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'T_ReviewType' 中的标识列插入显式值。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllReview.AddReviewType(T_ReviewType entity) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllReview.cs:行号 40
+
+2014-08-12 15:09:33,976 [13032] - 
+将截断字符串或二进制数据。
+语句已终止。
+
+2014-08-12 15:13:28,001 [12380] - 
+将截断字符串或二进制数据。
+语句已终止。
+

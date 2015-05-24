@@ -1,0 +1,184 @@
+﻿@using Ad.Tools.Web;
+@using Ad.Model.DbModel;
+@model Ad.Model.VModel.VModel_ConsultationAdd
+<script type='text/x-dot-template' id='template_Add_Consultation_foot'>
+    <div class='modal-footer'>
+        <div class='col-sm-8 text-center ad_form_result' id='show_Add_Consultation_result'></div>
+        <input type='button' class='btn btn-primary submit_ml' value='添加' id='btn_Add_Consultation' onclick='zf_Add_Consultation()'>
+        <input type='button' class='btn btn-default' data-dismiss='modal' value='关闭' id="btn_add_consultation_close"/>
+    </div>
+</script>
+<div class='ad_form_common'>
+    @using (Ajax.BeginForm("Add_Consultation", "Consultation", null, new AjaxOptions { HttpMethod = "Post" }, new RouteValueDictionary { { "id", "frm_Add_Consultation" }, { "class", "form-horizontal" }, { "role", "form" } }))
+    {
+        @Html.AntiForgeryToken()
+        <div class='form-group'>
+            @Html.LabelFor(m => m.ConsultantName, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.ConsultantName, new { @class = "form-control", @maxlength = "10"})
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.ConsultantName)</span>
+        </div>
+        <div class ='form-group'>
+            @Html.LabelFor(m => m.Telephone, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.Telephone, new { @class = "form-control", @onkeyup = "this.value = this.value.replace(/\\D/g,'')", @maxlength = "15" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Telephone)</span>
+       </div>
+       <div class ='form-group'>
+            @Html.LabelFor(m => m.Wechat, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.Wechat, new { @class = "form-control", @maxlength = 30 })
+       </div>
+       <div class ='form-group'>
+            @Html.LabelFor(m => m.QQNumber, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.QQNumber, new { @class = "form-control", @onkeyup = "this.value = this.value.replace(/\\D/g,'')", @maxlength = "15" })
+       </div>
+        <div class='form-group'>
+            @*@Html.LabelFor(m => m.Trip, new { @class = "col-sm-1 control-label" })*@
+            <label class="col-sm-1 control-label">行程</label>
+            <input type="text" class="form-control" name="Date0" onfocus="WdatePicker({ dateFmt: 'yyyy-MM-dd', isShowClear: true })" data-val-required="必须输入"  data-val="true" placeholder="Date" />
+            <input type="text" class="form-control" name="StartPlace0" data-val-required="必须输入" data-val="true" data-val-regex-pattern="^[A-Z]{3}$" data-val-regex="格式不正确"
+                   placeholder="Initial" style="margin-left:20px;width:100px;" onkeyup="tripplacecheck(this)" maxlength="3" />
+            <label class="control-label" style="margin-left:20px;float:left">TO</label>
+            <input type="text" class="form-control" name="EndPlace0" data-val-required="必须输入" data-val="true" data-val-regex-pattern="^[A-Z]{3}$" data-val-regex="格式不正确"
+                   placeholder="Destination" style="margin-left:20px;width:100px;" onkeyup="tripplacecheck(this)" maxlength="3" />
+            <button type="button" class="btn" onclick="addTrip()">行程添加</button>
+         </div>
+        <div class='form-group' id="aftertripdiv">
+            @Html.LabelFor(m => m.Cabin_seatId, new { @class = "col-sm-1 control-label" })
+            @Html.SelectList((IEnumerable<T_CustomerType>)ViewBag.CustomerTypeList, T_CustomerType_Description.CustomerTypeId, T_CustomerType_Description.CustomerTypeName, "Cabin_seatId", true, "", null, new { @class = "form-control" })
+            @*@Html.TextBoxFor(m => m.Cabin_seatId, new { @class = "form-control" })*@
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Cabin_seatId)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.AdultNum, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.AdultNum, new { @class = "form-control",@onkeyup="this.value=this.value.replace(/\\D/g,'')" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.AdultNum)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.ChildrenNum, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.ChildrenNum, new { @class = "form-control",@onkeyup="this.value=this.value.replace(/\\D/g,'')" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.ChildrenNum)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.BabyNum, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.BabyNum, new { @class = "form-control",@onkeyup="this.value=this.value.replace(/\\D/g,'')"})
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.BabyNum)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Quotation, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.Quotation, new { @class = "form-control", @onkeyup = "numcheck(this)" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Quotation)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Customer_sourceId, new { @class = "col-sm-1 control-label" })
+            @Html.SelectList((IEnumerable<T_CustomerSourceType>)ViewBag.CustomerSourceTypeList, T_CustomerSourceType_Description.CustomerSourceId, T_CustomerSourceType_Description.CustomerSourceName, "Customer_sourceId", true, "", null, new { @class = "form-control" })
+            @*@Html.TextBoxFor(m => m.Customer_sourceId, new { @class = "form-control" })*@
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Customer_sourceId)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Remark, new { @class = "col-sm-1 control-label" })
+            @Html.TextAreaFor(m => m.Remark, new { @class = "form-control" })
+        </div>
+    }
+</div>
+
+<style>
+    #Remark {
+        text-align: left;
+        width: 200px;
+        height: 100px;
+        resize: none;
+    }
+</style>
+
+<script type='text/javascript'>
+    var tripMaxNum = 0;
+    var tripDeleteNum = 0;
+    $.ad.set_validator_showLabel_style(1);
+    var ad_form_Add_Consultation = new $.ad.formA(
+    {
+        form_id: 'frm_Add_Consultation',
+        resultCtrlId: 'show_Add_Consultation_result',
+        template_id: 'template_Add_Consultation_foot',
+        template_btn_id: 'btn_Add_Consultation',
+        validatorStyle: 1
+    });
+    ad_form_Add_Consultation.template_btn_load();
+    function zf_Add_Consultation() {
+        //ad_form_Add_Consultation.submit();
+        ConsultationAddSubmit();
+    }
+
+
+    function ConsultationAddSubmit() {
+        var form = $("#frm_Add_Consultation");
+        var resultCtrl = $("#show_Add_Consultation_result");
+        ad_form_Add_Consultation.reset_validation();
+        if (!form.valid()) {
+            return;
+        }
+        $.ad.wait();
+        $.post("/Consultation/Add_Consultation", form.serializeArray()).done(function (datas) {
+            if (!datas.IsOK) {
+                form.validate({}).showErrors(datas.Data);
+                var msg = $.ad.isNullStr(datas.Msg) ? "操作失败" : datas.Msg;
+                ad_form_Add_Consultation.setError(msg);
+            }
+            else {
+                var msg = $.ad.isNullStr(datas.Msg) ? "操作成功" : datas.Msg;
+                $("#btn_add_consultation_close").click();
+            }
+        }).complete(function (datas) {
+            search_Consultation();
+            $.unblockUI();
+        });
+    }
+
+
+    function addTrip() {
+        if (tripMaxNum - tripDeleteNum > 5) { return;}
+        tripMaxNum++;
+        //tripMaxNum = 0;
+        var jqdom = $("#aftertripdiv");
+
+        var htmldom = $("<div class='form-group'>" +
+            "<label class='col-sm-1 control-label'></label>" +
+            "<input type='text' class='form-control' name='Date0' id='Date" + tripMaxNum + "' " + " placeholder='Date' readonly='true'/>" +
+            "<input type='text' class='form-control' name='StartPlace0' id='StartPlace" + tripMaxNum + "' placeholder='Initial' style='margin-left:20px;width:100px;' readonly='true'/>" +
+            "<label class='control-label' style='margin-left:20px;float:left'>TO</label>" +
+            "<input type='text' class='form-control' name='EndPlace0' id='EndPlace" + tripMaxNum + "'  placeholder='Destination' style='margin-left:20px;width:100px;' readonly='true'/>" +
+            "<button type='button' class='btn' onclick='deletecurrenttrip(this)'>删除</button>"+
+           "</div>");
+
+        $.ad.dialog_modal("/Consultation/Select_Trip/", "选择行程", "加载中...", function (e) {
+            var obj = $.ad.getModelValue();
+            if (null == obj || "undefinded" == obj || null == obj.TripDate || "undefinded" == obj.TripDate) {
+                tripMaxNum--;
+                return;
+            }
+            htmldom.insertBefore(jqdom);
+            $("#Date" + tripMaxNum).val(obj.TripDate);
+            $("#StartPlace" + tripMaxNum).val(obj.StartTripPlace);
+            $("#EndPlace" + tripMaxNum).val(obj.EndTripPlace);
+            $.ad.setModelValue(null);
+            //$("#EndPlace" + tripMaxNum).parent().css("display", "block");
+
+        });
+    }
+
+    function deletecurrenttrip(ctr) {
+        tripDeleteNum++;
+        var currentbuton = $(ctr);
+        currentbuton.parent().remove();
+    }
+
+    function numcheck(ctr) {
+        ctr.value = ctr.value.replace(/[^\d.]/g, "");
+        ctr.value = ctr.value.replace(/^\./, "");
+        ctr.value = ctr.value.replace(/\.{2,}/g, "\.");
+        ctr.value = ctr.value.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".")
+    }
+
+    function tripplacecheck(ctr) {
+        ctr.value = ctr.value.toUpperCase();
+        ctr.value = ctr.value.replace(/[^A-Z]/g, "");
+    }
+</script>

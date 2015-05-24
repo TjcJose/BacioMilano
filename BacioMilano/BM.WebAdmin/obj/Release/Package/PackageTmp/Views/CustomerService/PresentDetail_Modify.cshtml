@@ -1,0 +1,138 @@
+﻿@model Ad.Model.VModel.PresentDetailModifyModel
+
+@{
+    var frmHelperTag = "PresentDetailModify";
+}
+
+<script type="text/x-dot-template" id="template_@(frmHelperTag)_foot">
+    <div class="modal-footer">
+        <div class="col-sm-8 text-center ad_form_result" id="show_@(frmHelperTag)_result"></div>
+        <input type="button" class="btn btn-primary submit_ml" value="修改" id="btn_@(frmHelperTag)" onclick="zf_@(frmHelperTag)()">
+        <input type="button" class="btn btn-default" data-dismiss="modal" value="关闭" />
+    </div>
+</script>
+
+<div class="ad_form_common">
+    @using (Ajax.BeginForm("PresentDetail_Modify", "CustomerService", null, new AjaxOptions { HttpMethod = "Post" },
+         new RouteValueDictionary { { "id", "frm_" + frmHelperTag }, { "class", "form-horizontal" }, { "role", "form" } }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.MemberId, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.MemberId, new { @class = "form-control", @readonly = true })
+
+            @Html.LabelFor(m => m.MemberName, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.MemberName, new { @class = "form-control", @readonly = true })
+
+            <button type="button" class="btn btn-link ad_mr_word" onclick="selectMember()">选择会员</button>
+            @Html.ValidationMessageFor(m => m.MemberId)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PresentId, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.PresentId, new { @class = "form-control", @readonly = true })
+
+            @Html.LabelFor(m => m.PresentName, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.PresentName, new { @class = "form-control", @readonly = true })
+
+            <button type="button" class="btn btn-link ad_mr_word" onclick="selectPresent()">选择礼品</button>
+            <span class="pull-left">@Html.ValidationMessageFor(m => m.PresentId)</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PresentPrice, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.PresentPrice, new { @class = "form-control", @readonly = true })
+            <span class="pull-left">@Html.ValidationMessageFor(m => m.PresentPrice)</span>
+        </div>
+        <div class="form-group" id="CountDivId">
+            @Html.LabelFor(m => m.PresentCount, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.PresentCount, new { @class = "form-control", @onkeyup = "presentDetailCountCheck(this)", @maxlength = "5" })
+            <span class="pull-left">礼品数量:</span>
+            <span id="TotalCount" class="pull-left" style="font:bold;font-size:large;color:blue">@Model.RemainCount</span>
+            <span class="pull-left">@Html.ValidationMessageFor(m => m.PresentCount)</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProvideDate, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.ProvideDate, new { @class = "form-control", @onfocus = "WdatePicker({dateFmt:'yyyy/MM/dd HH:mm:ss',isShowClear: true })" })
+            <span class="pull-left">@Html.ValidationMessageFor(m => m.ProvideDate)</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Remark, new { @class = "col-sm-1 control-label" })
+            @Html.TextAreaFor(m => m.Remark, new { @class = "form-control", @maxlength = "200" })
+            <span class="pull-left">@Html.ValidationMessageFor(m => m.Remark)</span>
+        </div>
+        @Html.HiddenFor(m=>m.Id)
+        @Html.HiddenFor(m => m.RemainCount);
+        @Html.HiddenFor(m => m.OriginPresentId);
+        @Html.HiddenFor(m => m.OriginPresenCount);
+    }
+</div>
+
+<script type="text/javascript">
+
+    var ad_form_@frmHelperTag = new $.ad.formA({
+        form_id: "frm_@(frmHelperTag)",
+        resultCtrlId: "show_@(frmHelperTag)_result",
+        template_id: "template_@(frmHelperTag)_foot",
+        template_btn_id: "btn_@(frmHelperTag)"
+    });
+    ad_form_@(frmHelperTag).template_btn_load();
+
+    function zf_@frmHelperTag () {
+        ad_form_@(frmHelperTag).submit();
+    }
+    function selectMember() {
+        $.ad.dialog_modal("/Member/MemberSelect", "选择会员", "加载中...", function (e) {
+            var obj = $.ad.getModelValue();
+            if ($.ad.isDefined(obj)) {
+                $("#MemberName").val(obj.MemberName);
+                $("#MemberId").val(obj.MemberId);
+
+            }
+        },"800");
+    }
+
+    function selectPresent(){
+        $.ad.dialog_modal("/Present/PresentSelect", "选择礼品", "加载中...", function (e) {
+            var obj = $.ad.getModelValue();
+            if ($.ad.isDefined(obj)) {
+                $("#PresentName").val(obj.PresentName);
+                $("#PresentId").val(obj.PresentId);
+                $("#PresentPrice").val(obj.Price);
+                $("#PresentCount").val(0);
+                if(@Model.OriginPresentId == obj.PresentId){
+                    $("#TotalCount").html(@Model.RemainCount);
+                }else{
+                    $("#TotalCount").html(obj.Count);
+                }
+            }
+        },"800");
+    }
+    function presentDetailCountCheck(ctr) {
+        ctr.value = ctr.value.replace(/\D./g, "");
+        var  totalCountDom = $("#TotalCount");
+        if(totalCountDom != "undefined" && totalCountDom != null){
+            var remainCount = totalCountDom.text();
+            if(remainCount !="undefined" && remainCount != null){
+                if(!isNaN(remainCount)){
+                    if(remainCount<Number(ctr.value)){
+                        ctr.value=0;
+                    }
+                }
+            }
+        }
+
+    }
+</script>
+<style>
+    #Remark {
+        text-align: left;
+        width: 200px;
+        height: 100px;
+        max-width: 200px;
+        max-height: 100px;
+        resize: none;
+    }
+</style>
+
+

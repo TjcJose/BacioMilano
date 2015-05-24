@@ -1,0 +1,34 @@
+2014-08-19 20:37:08,777 [7524] - 
+不能将值 NULL 插入列 'OrderFlug'，表 'wokee.dbo.T_RescheduledRefundSupplier'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllOrderManagement.RescheduledOrRefundOrder2(Nullable`1 orderId, Nullable`1 managerId, RescheduledOrRefundEnum flag, String ticketSerialNumStr) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 4155
+
+2014-08-19 20:44:09,634 [1528] - 
+不能将值 NULL 插入列 'OrderFlug'，表 'wokee.dbo.T_RescheduledRefundSupplier'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllOrderManagement.RescheduledOrRefundOrder2(Nullable`1 orderId, Nullable`1 managerId, RescheduledOrRefundEnum flag, String ticketSerialNumStr) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 4155
+

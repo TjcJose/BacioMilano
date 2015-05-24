@@ -1,0 +1,200 @@
+﻿@using Ad.Model.VModel;
+@using Ad.Model.VModel;
+@using Ad.Fw;
+@using Ad.Tools.Web;
+@using Ad.Util;
+@using Ad.Model.EnumType;
+@using Ad.Model.DbModel;
+
+@model PresentDetailSearchModel
+
+@{
+    var config = ConfigHelper.Config_Instance;
+}
+
+@{
+    bool isAdd = this.ViewBag.isAdd;
+    bool isModify = this.ViewBag.isModify;
+    //bool isDelete = this.ViewBag.isDelete;
+}
+
+<script id="template_search_id" type="text/x-dot-template">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="nowrap">赠送日期</th>
+                <th class="nowrap">部门</th>
+                <th class="nowrap">员工</th>
+                <th class="nowrap">会员ID</th>
+                <th class="nowrap">会员姓名</th>
+                <th class="nowrap">礼品名称</th>
+                <th class="nowrap">礼品数量</th>
+                <th class="nowrap">备注</th>
+                @if (isModify)
+                {
+                    <th class="nowrap">修改</th> }
+                @*@if (isDelete)
+                {
+                    <th class="nowrap">删除</th> }*@
+            </tr>
+        </thead>
+        <tbody>
+            {{~it.Models :data:index}}
+            <tr>
+                <td>{{=data.ProvideDateStr}}</td>
+                <td>{{=data.DepartMentName}}</td>
+                <td>{{=data.TrueName}}</td>
+                <td data-ad-as-name="true" data-ad-id="{{=data.Id}}">{{=data.MemberId}}</td>
+                <td>{{=data.MemberName}}</td>
+                <td>{{=data.PresentName}}</td>
+                <td>{{=data.PresentCount}}</td>
+                <td>{{!data.Remark}}</td>
+                @if (isModify)
+                {
+                    <td><a data-ad-id="{{=data.Id}}" href="#" onclick="PresentDetail_modify(this)">修改</a></td>
+                }
+                @*@if (isDelete)
+                {
+                    <td><a data-ad-id="{{=data.Id}}" href="#" onclick="PresentDetail_delete(this)">删除</a></td>
+                }*@
+            </tr>
+            {{~}}
+        </tbody>
+    </table>
+    <div id="div_search_splitpage_id" class="pagination pagination-sm"></div>
+</script>
+
+<form method="post" id="searchFormS" class="form-horizontal" role="form">
+    <div class="form-group">
+        @Html.LabelFor(m => m.PDDepartmentId, new { @class = "control-label" })
+        @Html.SelectList((IEnumerable<T_MGroup>)ViewBag.DepartmentList, T_MGroup_Description.GroupId, T_MGroup_Description.GroupName,
+                                    "PDDepartmentId", true, "", null, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.PDManagerName, new { @class="control-label"})
+        @Html.TextBoxFor(m => m.PDManagerName, new { @class = "form-control ad_mr_word", @placeholder = "StaffName" })
+
+
+        @Html.LabelFor(m => m.PDMemberId, new { @class = "control-label  ad_mr_word" })
+        @Html.TextBoxFor(m=>m.PDMemberId, new { @class = "form-control ad_mr_word", @placeholder = "MemberId" })
+        @Html.LabelFor(m => m.PDMemberName, new { @class = "control-label ad_mr_word" })
+        @Html.TextBoxFor(m => m.PDMemberName, new { @class = "form-control ad_mr_word", @placeholder = "MemberName" })
+        <button type="button" class="btn btn-link ad_mr_word" onclick="selectMember()">选择会员</button>
+
+
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(m => m.PDPresentCountStart, new { @class = "form-control", @placeholder = "Count1", @onkeyup = "this.value=this.value.replace(/\\D/g,'')" })
+        <label for="" class="control-label"> <= 礼品数量 <= </label>
+        @Html.TextBoxFor(m => m.PDPresentCountEnd, new { @class = "form-control", @placeholder = "Count2", @onkeyup = "this.value=this.value.replace(/\\D/g,'')" })
+        @Html.LabelFor(m => m.PDPresentName, new { @class = "control-label" })
+        @Html.TextBoxFor(m => m.PDPresentName, new { @class = "form-control ad_mr_word", @placeholder = "PresentName" })
+        @Html.TextBoxFor(m => m.PDDateStart, new { @class = "form-control  ad_mr_word", @placeholder = "Date1", @onfocus = "WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear: true })" })
+        <label for="" class="control-label"> <= 发放日期 <= </label>
+        @Html.TextBoxFor(m => m.PDDateEnd, new { @class = "form-control ", @placeholder = "Date2", @onfocus = "WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear: true })" })
+        @Html.Hidden("presentDetailPageIndexS", 1)
+        @Html.Hidden("presentDetailPageSizeS", config.PageSize)
+        <input type="button" id="btnSearchS" value="查询" class="btn btn-default" />
+        @if (isAdd)
+        { <input type="button" id="btnAddS" value="添加" class="btn btn-default" /> }
+    </div>
+
+</form>
+
+<div id="divSearchResultS" class="ad_table"></div>
+
+
+<script>
+    function split_search_submit() {
+        $.post("/CustomerService/PresentDetail_Search", $("#searchFormS").serializeArray()).done(function (datas) {
+            var tempFn = doT.template($("#template_search_id").html());
+            var html = tempFn(datas);
+            $("#divSearchResultS").html(html);
+            $.ad.split_page(datas.PageIndex, datas.PageCount, datas.PageSize, datas.RecordCount, "presentDetailPageIndexS", "searchFormS", "div_search_splitpage_id", split_search_submit);
+        });
+    }
+
+    $("#btnSearchS").click(function (e) {
+        $("#presentDetailPageIndexS").val(1);
+        split_search_submit();
+    });
+
+    split_search_submit();
+</script>
+
+<script>
+
+    function PresentDetail_see(ctr) {
+        var id = $(ctr).attr("data-ad-id");
+        var name = $(ctr).parent().parent().find("td[data-ad-as-name=true]").text();
+        var title = "礼品明细";
+        var url = "/CustomerService/PresentDetail_OnlyRead/" + id;
+        $.ad.dialog_modal(url, title, "加载中...", null, "800");
+    }
+
+    function selectMember() {
+        $.ad.dialog_modal("/Member/MemberSelect", "选择会员", "加载中...", function (e) {
+            var obj = $.ad.getModelValue();
+            if ($.ad.isDefined(obj)) {
+                $("#PDMemberName").val(obj.MemberName);
+                $("#PDMemberId").val(obj.MemberId);
+            }
+        });
+    }
+</script>
+
+@if (isAdd)
+{
+    <script>
+        $("#btnAddS").click(function (e) {
+            $.ad.dialog_modal("/CustomerService/PresentDetail_Add", "添加礼品", "加载中...", function (e) {
+                if ($.ad.getOperValue()) {
+                    split_search_submit();
+                }
+            }, "800");
+        });
+    </script>
+}
+
+@if (isModify)
+{
+    <script>
+        function PresentDetail_modify(ctrl) {
+            var id = $(ctrl).attr("data-ad-id");
+            var name = $(ctrl).parent().parent().find("td[data-ad-as-name=true]").text();
+            var title = "礼品<strong>" + name + "</strong>的信息";
+            var url = "/CustomerService/PresentDetail_Modify/" + id;
+            $.ad.dialog_modal(url, title, "加载中...", function (e) {
+                if ($.ad.getOperValue()) {
+                    split_search_submit();
+                }
+            }, "800");
+        }
+    </script>
+}
+
+@*@if (isDelete)
+{
+    <script>
+        function PresentDetail_delete(ctrl) {
+            var id = $(ctrl).attr("data-ad-id");
+            var name = $(ctrl).parent().parent().find("td[data-ad-as-name=true]").text();
+            var title = "删除提示";
+            var content = "你确认删除<strong>" + name + "</strong>的信息吗？";
+
+            $.ad.confirm(title, content, function () {
+                $.ad.wait();
+                $.post("/Present/PresentDetail_Delete", { id: id }).done(function (data) {
+                    if (data.IsOK) {
+                        $(ctrl).parent().parent().remove();
+                    } else {
+                        var msg = "<strong>" + name + "</strong>：" + data.Msg;
+                        $.ad.alertError(data.Msg);
+                    }
+                }).complete(function (datas) {
+                    $.unblockUI();
+                });
+            });
+
+        }
+    </script>
+}*@

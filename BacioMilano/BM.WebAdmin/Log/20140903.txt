@@ -1,0 +1,17 @@
+2014-09-03 15:44:42,059 [29992] - 
+excel export financialorder error
+System.IO.FileNotFoundException: 未能找到文件“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\TransportationDetail.xls”。
+文件名:“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\TransportationDetail.xls”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 Ad.Web.Controllers.TransportationController.TransportationExeclExport(VModel_TransportationList model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\TransportationController.cs:行号 373
+
+2014-09-03 17:50:38,609 [14072] - 
+不允许使用邮箱名称。 服务器响应为:authentication is required,smtp1,C8mowEDZ_Wnp5AZUSqTIAQ--.1075S3 1409737962
+   在 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   在 System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   在 System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   在 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   在 Ad.Web.Controllers.TemplateController.OrderDetailMail(OrderMailDetailModel model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\TemplateController.cs:行号 341
+

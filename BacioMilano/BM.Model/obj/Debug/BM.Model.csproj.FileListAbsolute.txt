@@ -1,0 +1,5 @@
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Model.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Model.pdb
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Model\obj\Debug\BM.Model.csprojResolveAssemblyReference.cache
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Model\obj\Debug\BM.Model.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Model\obj\Debug\BM.Model.pdb

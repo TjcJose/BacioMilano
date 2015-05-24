@@ -1,0 +1,78 @@
+﻿@using Ad.Model.VModel;
+@using Ad.Model.VModel;
+@using Ad.Fw;
+@using Ad.Tools.Web;
+@using Ad.Util;
+
+
+@{
+    var config = ConfigHelper.Config_Instance;
+}
+
+<script id="template_search_esaymes_id" type="text/x-dot-template">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="nowrap">序号</th>
+                <th class="nowrap">日期</th>
+                <th class="nowrap">信息</th>
+                <th class="nowrap">删除</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{~it.Models :data:index}}
+            <tr>
+                <td data-ad-as-name="true">{{=index}}</td>
+                <td>{{=data.DateString}}</td>
+                <td>{{!data.Context}}</td>
+                 <td><a data-ad-id="{{=data.Id}}" href="#" onclick="esayMessageDelete(this)">删除</a></td>
+            </tr>
+            {{~}}
+        </tbody>
+    </table>
+    <div id="div_search_esaymes_id" class="pagination pagination-sm"></div>
+</script>
+@Html.Hidden("esayMespageIndexS", 1)
+@Html.Hidden("esayMespageSizeS", 20)
+<div id="divSearchEsayMesResultS" class="ad_table"></div>
+
+
+<script>
+    function search_esaymes_submit() {
+        $.post("/EsayMessage/SearchEsayMessage", "esayMespageIndexS=" + 1 + "&esayMespageSizeS="+20).done(function (datas) {
+            var tempFn = doT.template($("#template_search_esaymes_id").html());
+            var html = tempFn(datas);
+            $("#divSearchEsayMesResultS").html(html);
+            $.ad.split_page(datas.PageIndex, datas.PageCount, datas.PageSize, datas.RecordCount, "esayMespageIndexS", "searchFormS", "div_search_esaymes_id", search_esaymes_submit);
+        });
+    }
+
+    search_esaymes_submit();
+</script>
+
+<script>
+    function esayMessageDelete(ctrl) {
+        var id = $(ctrl).attr("data-ad-id");
+        var title = "删除提示";
+        var content = "你确认删除该消息吗？";
+
+        $.ad.confirm(title, content, function () {
+            $.ad.wait();
+            $.post("/EsayMessage/DeleteFromEsayMessage", { id: id }).done(function (data) {
+                $(ctrl).parent().parent().remove();
+            }).complete(function (datas) {
+                $.unblockUI();
+                $.post("/EsayMessage/SearchNewEsayMessage").done(function (data) {
+                    var message_jq = $("#message_management");
+                    if (data > 0) {
+                        message_jq.text("有" + data + "条信息");
+                        message_jq.css({ "family": "Arial", "font-size": "15px", "color": "red" });
+                    } else {
+                        message_jq.css({"display":"none"});
+                    }
+                });
+            });
+        });
+
+    }
+</script>

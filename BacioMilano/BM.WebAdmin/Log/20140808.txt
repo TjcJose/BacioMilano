@@ -1,0 +1,78 @@
+2014-08-08 15:41:03,471 [6824] - 
+excel export error
+System.UnauthorizedAccessException: 检索 COM 类工厂中 CLSID 为 {00024500-0000-0000-C000-000000000046} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。
+   在 System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(RuntimeType serverType, Object[] props, Boolean bNewObj)
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 Ad.Web.Controllers.MemberController.ExportMemberMessageToExcel(MemberSearchModel model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\MemberController.cs:行号 284
+
+2014-08-08 15:41:47,237 [6824] - 
+excel export error
+System.UnauthorizedAccessException: 检索 COM 类工厂中 CLSID 为 {00024500-0000-0000-C000-000000000046} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。
+   在 System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(RuntimeType serverType, Object[] props, Boolean bNewObj)
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 Ad.Web.Controllers.MemberController.ExportMemberMessageToExcel(MemberSearchModel model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\MemberController.cs:行号 284
+
+2014-08-08 15:42:30,011 [15040] - 
+excel export error
+System.UnauthorizedAccessException: 检索 COM 类工厂中 CLSID 为 {00024500-0000-0000-C000-000000000046} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。
+   在 System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(RuntimeType serverType, Object[] props, Boolean bNewObj)
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 Ad.Web.Controllers.MemberController.ExportMemberMessageToExcel(MemberSearchModel model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\MemberController.cs:行号 284
+
+2014-08-08 15:42:50,386 [10140] - 
+excel export error
+System.UnauthorizedAccessException: 检索 COM 类工厂中 CLSID 为 {00024500-0000-0000-C000-000000000046} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。
+   在 System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(RuntimeType serverType, Object[] props, Boolean bNewObj)
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 Ad.Web.Controllers.MemberController.ExportMemberMessageToExcel(MemberSearchModel model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\MemberController.cs:行号 284
+
+2014-08-08 15:43:14,369 [15352] - 
+excel export error
+System.UnauthorizedAccessException: 检索 COM 类工厂中 CLSID 为 {00024500-0000-0000-C000-000000000046} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。
+   在 System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(RuntimeType serverType, Object[] props, Boolean bNewObj)
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 Ad.Web.Controllers.MemberController.ExportMemberMessageToExcel(MemberSearchModel model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\MemberController.cs:行号 284
+
+2014-08-08 15:43:46,363 [9836] - 
+excel export financialorder error
+System.UnauthorizedAccessException: 检索 COM 类工厂中 CLSID 为 {00024500-0000-0000-C000-000000000046} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。
+   在 System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
+   在 System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(RuntimeType serverType, Object[] props, Boolean bNewObj)
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrderListExeclExport(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 1678
+

@@ -1,0 +1,150 @@
+OrderManagementController
+ 
+ 
+ 
+            [HttpGet]
+        public ActionResult Add_NewTicket()
+        {
+            return PartialView();
+        }
+
+        #region test
+        [HttpGet]
+        public ActionResult Test()
+        {
+            MainModel model = new MainModel();
+            return PartialView(model);
+        }
+
+        [HttpPost]
+        public ActionResult Test(MainModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (model != null)
+                {
+                    Console.Write(model.ToString());
+                }
+            }
+
+            return PartialView(model);
+        }
+
+        public ActionResult Test2()
+        {
+            MainModel2 model = new MainModel2();
+            return PartialView(model);
+        }
+
+        [HttpPost]
+        public ActionResult Test2(MainModel2 model)
+        {
+            string ss = Request.Form["flightAddModel.FlightId"];
+
+            string text1s = Request.Form["text1"];
+            string[] text1Array = text1s.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] text2Array = text1s.Split(new char[] { ',' }, StringSplitOptions.None);
+            if (text1s != null)
+            {
+                
+            }
+            if (string.IsNullOrWhiteSpace(ss))
+            {
+                Console.Write("");
+            }
+            if (ModelState.IsValid)
+            {
+                if (model != null)
+                {
+                    Console.Write(model.ToString());
+                }
+            }
+
+            return PartialView(model);
+        }
+
+        public ActionResult Test3()
+        {
+            TestModel model = new TestModel();
+            return PartialView(model);
+        }
+        [HttpPost]
+        public ActionResult Test3(TestModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Console.Write(model.Cabin);
+            }
+
+            return PartialView(model);
+        }
+
+        [HttpGet]
+        public ActionResult Test_Modify()
+        {
+            this.ViewBag.OrderMemberId = 201407101L;
+            long pNRServialNo = 3L;
+            TicketModifyModel2 model2 = new TicketModifyModel2();
+            model2.tPNR = BllOrderManagement.SelectPNRBySerialNumber(pNRServialNo);
+            model2.tFlight = BllOrderManagement.SelectFlightListByPNRNo(pNRServialNo);
+            model2.tFlightPassenger = BllOrderManagement.SelectFlightPassengerListByPNRNo(pNRServialNo);
+            model2.tFlightSupplier = BllOrderManagement.SelectFlightSupplierListByPNRNo(pNRServialNo);
+            return PartialView(model2);
+        }
+        [HttpPost]
+        public ActionResult Test_Modify(TicketModifyModel2 model)
+        {
+            if (!this.IsOperRight(ConstSysFun.OrderForm, ConstSysOper.Modify))
+            {
+                return this.Json(new ResultU(false, ConstResult.fail_right, "权限不足"));
+            }
+            if (string.IsNullOrWhiteSpace(model.tPNR.PNR))
+            {
+                return this.Json(new ResultU(false, 0, "PNR不能为空"));
+            }
+            string flightIdStr = Request.Form["FlightId"];
+            if (string.IsNullOrWhiteSpace(flightIdStr))
+            {
+                return this.Json(new ResultU(false, 0, "航班信息至少有一条"));
+            }
+            string certificateNoStr = Request.Form["CertificateNo"];
+            if (string.IsNullOrWhiteSpace(certificateNoStr))
+            {
+                return this.Json(new ResultU(false, 0, "常旅客信息至少有一条"));
+            }
+            string supplierCompanyStr = Request.Form["SupplierCompany"];
+            if (string.IsNullOrWhiteSpace(supplierCompanyStr))
+            {
+                return this.Json(new ResultU(false, 0, "供应商信息至少有一条"));
+            }
+            // 航班信息
+            List<T_Flight> newInsertFlightList = new List<T_Flight>();
+            List<T_Flight> toUpdateFlightList = new List<T_Flight>();
+            List<long> toDeleteFlightList = new List<long>();
+
+            string flightPNRSerialNumStr = Request.Form["flight_PNRSerialNum"];
+
+            // 常旅客
+            List<T_FlightPassenger> newInsertFPassengerList = new List<T_FlightPassenger>();
+            List<T_FlightPassenger> toUpdateFPassengerList = new List<T_FlightPassenger>();
+            List<long> toDeleteFPassengerList = new List<long>();
+
+            // 供应商
+            List<T_FlightSupplier> newInsertFSupplierList = new List<T_FlightSupplier>();
+            List<T_FlightSupplier> toUpdateFSupplierList = new List<T_FlightSupplier>();
+            List<long> toDeleteFSupplierList = new List<long>();
+
+
+
+
+            if (ModelState.IsValid)
+            {
+                string flightIdName = Request.Form["FlightId"];
+                if (!string.IsNullOrWhiteSpace(flightIdName))
+                {
+
+                }
+            }
+            return this.Json(new ResultU(false, ConstResult.fail, "操作失败"));
+        }
+        #endregion

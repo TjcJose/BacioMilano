@@ -1,0 +1,16 @@
+2014-09-25 10:22:41,243 [10332] - 
+已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 Ad.Fw.BllOrderManagement.UpdateMainOrderByIdForRefund(Nullable`1 orderId, Nullable`1 managerId) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 4559
+
+2014-09-25 13:38:37,409 [13204] - 
+excel export financialorder error
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Globalization.TimeSpanFormat.FormatCustomized(TimeSpan value, String format, DateTimeFormatInfo dtfi)
+   在 System.Globalization.TimeSpanFormat.Format(TimeSpan value, String format, IFormatProvider formatProvider)
+   在 System.TimeSpan.ToString(String format)
+   在 Ad.Fw.BllTransportation.List_Transportation(VModel_TransportationList options, String orderString) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllTransportation.cs:行号 374
+   在 Ad.Web.Controllers.TransportationController.TransportationExeclExport(VModel_TransportationList model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\TransportationController.cs:行号 389
+

@@ -1,0 +1,15 @@
+D:\zzj\Code2\dll\Ad.Tools.Web.dll
+D:\zzj\Code2\dll\Ad.Tools.Web.pdb
+D:\zzj\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.csprojResolveAssemblyReference.cache
+D:\zzj\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.dll
+D:\zzj\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.pdb
+D:\zzj\Code2\wokee\Code2\dll\Ad.Tools.Web.dll
+D:\zzj\Code2\wokee\Code2\dll\Ad.Tools.Web.pdb
+D:\zzj\Code2\wokee\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.csprojResolveAssemblyReference.cache
+D:\zzj\Code2\wokee\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.dll
+D:\zzj\Code2\wokee\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.pdb
+D:\zzj\wokeeCode\Code2\dll\Ad.Tools.Web.dll
+D:\zzj\wokeeCode\Code2\dll\Ad.Tools.Web.pdb
+D:\zzj\wokeeCode\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.csprojResolveAssemblyReference.cache
+D:\zzj\wokeeCode\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.dll
+D:\zzj\wokeeCode\Code2\Ad.Tools.Web\obj\Debug\Ad.Tools.Web.pdb

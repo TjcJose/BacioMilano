@@ -1,0 +1,18 @@
+2014-10-17 11:19:29,246 [10464] - 
+从T_ShortMessage中根据HolidayTypeRecordId删除失败
+
+2014-10-17 11:19:33,235 [15400] - 
+从T_ShortMessage中根据HolidayTypeRecordId删除失败
+
+2014-10-17 11:19:36,483 [15400] - 
+从T_ShortMessage中根据HolidayTypeRecordId删除失败
+
+2014-10-17 11:19:43,310 [11212] - 
+从T_ShortMessage中根据HolidayTypeRecordId删除失败
+
+2014-10-17 11:24:36,914 [2184] - 
+从T_ShortMessage中根据HolidayTypeRecordId删除失败
+
+2014-10-17 11:26:41,473 [1128] - 
+从T_ShortMessage中根据HolidayTypeRecordId删除失败
+

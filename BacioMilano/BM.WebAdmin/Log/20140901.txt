@@ -1,0 +1,356 @@
+2014-09-01 06:55:37,379 [10424] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3471
+
+2014-09-01 08:13:26,153 [8688] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3689
+
+2014-09-01 08:16:37,299 [4564] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3691
+
+2014-09-01 08:23:25,164 [1628] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3696
+
+2014-09-01 08:26:14,827 [6304] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3457
+
+2014-09-01 08:29:11,999 [7848] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3457
+
+2014-09-01 08:31:45,107 [2112] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3457
+
+2014-09-01 08:36:39,594 [4184] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3457
+
+2014-09-01 14:38:38,028 [12644] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3777
+
+2014-09-01 14:41:27,962 [10460] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): ORDER BY 子句中的列 "V_MainOrderAndSuppSettlement.DepartmentName" 无效，因为该列没有包含在聚合函数或 GROUP BY 子句中。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5330
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3623
+ClientConnectionId:93df7f35-bc0d-4a18-896e-dcf3b7121463
+
+2014-09-01 14:44:23,831 [2960] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): ORDER BY 子句中的列 "V_MainOrderAndSuppSettlement.DepartmentName" 无效，因为该列没有包含在聚合函数或 GROUP BY 子句中。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5330
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3623
+ClientConnectionId:4bc4e52a-f316-426c-8d50-eb89d9bdcb53
+
+2014-09-01 14:49:10,172 [6152] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): ORDER BY 子句中的列 "V_MainOrderAndSuppSettlement.DepartmentName" 无效，因为该列没有包含在聚合函数或 GROUP BY 子句中。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5330
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3623
+ClientConnectionId:5dd82f1e-a912-4257-9404-1694d7069fae
+
+2014-09-01 14:51:11,029 [220] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): ORDER BY 子句中的列 "V_MainOrderAndSuppSettlement.DepartmentName" 无效，因为该列没有包含在聚合函数或 GROUP BY 子句中。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5330
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3623
+ClientConnectionId:5dd82f1e-a912-4257-9404-1694d7069fae
+
+2014-09-01 14:57:05,048 [3596] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3777
+
+2014-09-01 15:14:34,772 [14332] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3548
+
+2014-09-01 15:15:23,324 [10484] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3548
+
+2014-09-01 15:17:16,835 [10760] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3777
+
+2014-09-01 16:00:48,843 [11908] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3639
+
+2014-09-01 16:01:00,698 [4496] - 
+excel export financialorder error
+System.InvalidCastException: 对象不能从 DBNull 转换为其他类型。
+   在 System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5335
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3623
+
+2014-09-01 16:01:57,078 [4496] - 
+excel export financialorder error
+System.InvalidCastException: 对象不能从 DBNull 转换为其他类型。
+   在 System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5335
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3623
+
+2014-09-01 16:02:35,099 [13996] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3639
+
+2014-09-01 16:24:16,119 [14516] - 
+excel export financialorder error
+System.InvalidCastException: 对象不能从 DBNull 转换为其他类型。
+   在 System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5340
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3623
+
+2014-09-01 18:09:01,724 [12444] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): “OrderFlug”附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5333
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3621
+ClientConnectionId:dfbd27d1-4aad-4fc2-a2c3-89f6ea65f3f5
+
+2014-09-01 18:10:32,397 [12464] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): “OrderFlug”附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5333
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3621
+ClientConnectionId:dfbd27d1-4aad-4fc2-a2c3-89f6ea65f3f5
+
+2014-09-01 18:13:56,461 [13884] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): 列名 '#OrderFlug' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5345
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3621
+ClientConnectionId:f8750948-8044-4e43-82c2-64e706a316da
+
+2014-09-01 18:17:42,982 [10512] - 
+excel export financialorder error
+System.Data.SqlClient.SqlException (0x80131904): 列名 '#OrderFlug' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Ad.DA.OperationBase.ExecuteDataSet(String commandText, List`1 parameterNames, List`1 parameterValues, IDbDataAdapter da, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 225
+   在 Ad.DA.MappingSqlServer`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 555
+   在 Ad.DA.MappingBase`1.SelectStatistic(String whereSql, Object[] values, StatisticType statisticType, String statisticProperty, String groupProperty) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 2581
+   在 Ad.Fw.BllOrderManagement.OrderForFinancialExport3(VModel_MainOrderForFinancial options) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 5345
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3621
+ClientConnectionId:bb9a5352-2828-430a-ae03-d1faed2027b8
+
+2014-09-01 18:22:26,784 [7932] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x80020005): 类型不匹配。 (异常来自 HRESULT:0x80020005 (DISP_E_TYPEMISMATCH))
+   在 System.Dynamic.ComRuntimeHelpers.CheckThrowException(Int32 hresult, ExcepInfo& excepInfo, UInt32 argErr, String message)
+   在 CallSite.Target(Closure , CallSite , ComObject , String )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   在 CallSite.Target(Closure , CallSite , Object , String )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3658
+
+2014-09-01 18:31:19,890 [15540] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3719
+
+2014-09-01 18:41:18,131 [14028] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3723
+
+2014-09-01 18:44:03,120 [2808] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3723
+
+2014-09-01 23:11:03,285 [32040] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport3(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3832
+

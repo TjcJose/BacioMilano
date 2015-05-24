@@ -1,0 +1,81 @@
+    @if (refundRescheduledFlag)
+    {
+        <input type='button' class='btn btn-default submit_ml' value='改期' onclick='abtn_to_refund()' />
+        <input type='button' class='btn btn-default submit_ml' value='退票' onclick='abtn_to_refund()' style="margin-left:20px;" />
+
+        <script>
+            function abtn_to_refund(){
+                var content = '确认将(<strong>@orderId</strong>)改期吗？';
+                var title = '改期提示';
+                var ticket_checkbox_jq = $(".ticket_checkbox_class:checked");
+                var ticket_num_servail = "";
+                if("undefinded" == ticket_checkbox_jq || "unknown" == ticket_checkbox_jq||null==ticket_checkbox_jq || ""==ticket_checkbox_jq){
+
+                }else{
+                    var ticket_length = ticket_checkbox_jq.length;
+                    if(0<ticket_length){
+                        for(var i=0;i<ticket_length;i++){
+                            ticket_num_servail += $(ticket_checkbox_jq[i]).attr("data-value")+",";
+                        }
+                        ticket_num_servail = ticket_num_servail.substr(0,ticket_num_servail.length-1);
+                        // alert(ticket_num_servail);
+                    }else{
+                        alert("请选择要改期的机票");
+                        return;
+                    }
+                }
+                $.ad.confirm(title, content, function () {
+                    $.ad.wait();
+                    $.post('/OrderManagement/RescheduledTicket1', { orderId:"@orderId",ticketList:ticket_num_servail }).done(function (data) {
+                        if (data.IsOK) {
+                            $("#select_refund_ticket_close_id").click();
+                            search_MainOrderForSaleStaff();
+                            //$.ad.alertOK(data.Msg);
+                        } else {
+                            var msg = '<strong>@orderId</strong>：' + data.Msg;
+                            $.ad.alertError(data.Msg);
+                        }
+                    }).complete(function (datas) {
+                        $.unblockUI();
+                    });
+                });
+            }
+
+            function abtn_to_refund(){
+                var content = '确认将(<strong>@orderId</strong>)退票吗？';
+                var title = '退票提示';
+                var ticket_checkbox_jq = $(".ticket_checkbox_class:checked");
+                var ticket_num_servail = "";
+                if("undefinded" == ticket_checkbox_jq || "unknown" == ticket_checkbox_jq||null==ticket_checkbox_jq || ""==ticket_checkbox_jq){
+
+                }else{
+                    var ticket_length = ticket_checkbox_jq.length;
+                    if(0<ticket_length){
+                        for(var i=0;i<ticket_length;i++){
+                            ticket_num_servail += $(ticket_checkbox_jq[i]).attr("data-value")+",";
+                        }
+                        ticket_num_servail = ticket_num_servail.substr(0,ticket_num_servail.length-1);
+                        // alert(ticket_num_servail);
+                    }else{
+                        alert("请选择要退票的机票");
+                        return;
+                    }
+                }
+                $.ad.confirm(title, content, function () {
+                    $.ad.wait();
+                    $.post('/OrderManagement/RefundTicket1', { orderId:"@orderId" }).done(function (data) {
+                        if (data.IsOK) {
+                            $("#select_refund_ticket_close_id").click();
+                            search_MainOrderForSaleStaff();
+                            //$.ad.alertOK(data.Msg);
+                        } else {
+                            var msg = '<strong>@orderId</strong>：' + data.Msg;
+                            $.ad.alertError(data.Msg);
+                        }
+                    }).complete(function (datas) {
+                        $.unblockUI();
+                    });
+                });
+            }
+        </script>
+    }

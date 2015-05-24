@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Title>wokee管理平台</Title>
+    <PageSize>50</PageSize>
+    <UrlWeiXinAuthSite>http://103.24.228.167</UrlWeiXinAuthSite>
+    <UploadFolder>C:\Home\work\iFesion\BM.WebAdmin\upload</UploadFolder>
+  <UrlWeiXinAuthSite>http://103.24.228.167</UrlWeiXinAuthSite>
+  <UrlWeiXinMobileSite>http://103.24.228.167:60010</UrlWeiXinMobileSite>
+</Config>

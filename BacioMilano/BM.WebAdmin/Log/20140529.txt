@@ -1,0 +1,80 @@
+2014-05-29 09:42:11,066 [5364] - 
+DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+System.Data.SqlClient.SqlException (0x80131904): DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Delete(String whereSql, Object[] values, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingSqlServer.cs:行号 177
+   在 Ad.DA.MappingBase`1.Delete(T entity, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingBase.cs:行号 1065
+   在 Ad.Fw.BllManager.FunOper_Set(Int32 functionId, String data, Exception& error) 位置 c:\work\wokee\Ad.Fw\BllManager.Right.cs:行号 500
+ClientConnectionId:f3452262-bf35-41bb-9c20-3c2d22d67217
+
+2014-05-29 09:42:15,534 [5364] - 
+DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+System.Data.SqlClient.SqlException (0x80131904): DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Delete(String whereSql, Object[] values, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingSqlServer.cs:行号 177
+   在 Ad.DA.MappingBase`1.Delete(T entity, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingBase.cs:行号 1065
+   在 Ad.Fw.BllManager.FunOper_Set(Int32 functionId, String data, Exception& error) 位置 c:\work\wokee\Ad.Fw\BllManager.Right.cs:行号 500
+ClientConnectionId:f3452262-bf35-41bb-9c20-3c2d22d67217
+
+2014-05-29 09:43:18,976 [5160] - 
+DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+System.Data.SqlClient.SqlException (0x80131904): DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Delete(String whereSql, Object[] values, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingSqlServer.cs:行号 177
+   在 Ad.DA.MappingBase`1.Delete(T entity, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingBase.cs:行号 1065
+   在 Ad.Fw.BllManager.FunOper_Set(Int32 functionId, String data, Exception& error) 位置 c:\work\wokee\Ad.Fw\BllManager.Right.cs:行号 500
+ClientConnectionId:f3452262-bf35-41bb-9c20-3c2d22d67217
+
+2014-05-29 09:43:20,858 [6948] - 
+DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+System.Data.SqlClient.SqlException (0x80131904): DELETE 语句与 REFERENCE 约束"FK_T_MMENUF_REFERENCE_T_MFUNOP"冲突。该冲突发生于数据库"iFesion"，表"dbo.T_MMenuFunOper"。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Delete(String whereSql, Object[] values, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingSqlServer.cs:行号 177
+   在 Ad.DA.MappingBase`1.Delete(T entity, IDbConnection conn, IDbTransaction trans) 位置 c:\work\wokee\Ad.Tools\DA\MappingBase.cs:行号 1065
+   在 Ad.Fw.BllManager.FunOper_Set(Int32 functionId, String data, Exception& error) 位置 c:\work\wokee\Ad.Fw\BllManager.Right.cs:行号 500
+ClientConnectionId:f3452262-bf35-41bb-9c20-3c2d22d67217
+

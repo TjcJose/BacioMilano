@@ -1,0 +1,4 @@
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Tools.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\dll\BM.Tools.pdb
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Tools\obj\Debug\BM.Tools.dll
+D:\zzj\wokeeCode\zuizhong\BacioMilano\BacioMilano\BM.Tools\obj\Debug\BM.Tools.pdb

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABC6EFE2-3804-4E8F-A8D5-61A7951710D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BM.Tools</RootNamespace>
+    <AssemblyName>BM.Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebZPos\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebZPos\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\CacheCallHelper.cs" />
+    <Compile Include="Cache\CacheServiceProvider.cs" />
+    <Compile Include="Cache\CacheServiceProviderHelper.cs" />
+    <Compile Include="Cache\CacheTypes.cs" />
+    <Compile Include="Cache\CachingExpirationTypes.cs" />
+    <Compile Include="Cache\EnterpriseLibraryCacheService.cs" />
+    <Compile Include="Cache\EnterpriseLibraryCacheServiceProvider.cs" />
+    <Compile Include="Cache\ICacheService.cs" />
+    <Compile Include="Cache\IStaticCache.cs" />
+    <Compile Include="Config\ConfigFileManager.cs" />
+    <Compile Include="Config\IConfigInfo.cs" />
+    <Compile Include="DA\BaseCmdProc.cs" />
+    <Compile Include="DA\DatabaseType.cs" />
+    <Compile Include="DA\DataReaderUse.cs" />
+    <Compile Include="DA\DataRowUseReader.cs" />
+    <Compile Include="DA\DbConnectionHelper.cs" />
+    <Compile Include="DA\EasyuiPageList.cs" />
+    <Compile Include="DA\IColumnUseReader.cs" />
+    <Compile Include="DA\IModel.cs" />
+    <Compile Include="DA\MappingBase.cs" />
+    <Compile Include="DA\MappingMySql.cs" />
+    <Compile Include="DA\MappingOleDb.cs" />
+    <Compile Include="DA\MappingOracle.cs" />
+    <Compile Include="DA\MappingSqlite.cs" />
+    <Compile Include="DA\MappingSqlServer.cs" />
+    <Compile Include="DA\MappingUtility.cs" />
+    <Compile Include="DA\ModelConvertUtility.cs" />
+    <Compile Include="DA\ModelDAL.cs" />
+    <Compile Include="DA\ModelDescriptionHelper.cs" />
+    <Compile Include="DA\ModelExtension.cs" />
+    <Compile Include="DA\OperationBase.cs" />
+    <Compile Include="DA\OperationMySql.cs" />
+    <Compile Include="DA\OperationOleDb.cs" />
+    <Compile Include="DA\OperationOracle.cs" />
+    <Compile Include="DA\OperationSqlite.cs" />
+    <Compile Include="DA\OperationSqlServer.cs" />
+    <Compile Include="DA\PageListModel.cs" />
+    <Compile Include="DA\SplitPageHelper.cs" />
+    <Compile Include="DA\StatisticType.cs" />
+    <Compile Include="GDI\ImageManager.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="IO\FileSizeConvert.cs" />
+    <Compile Include="IO\IFolderCalculate.cs" />
+    <Compile Include="IO\ModFolderCalculate.cs" />
+    <Compile Include="Log\ILog.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LogHelper.cs" />
+    <Compile Include="Log\LogManager.cs" />
+    <Compile Include="Net\IPAddressHelper.cs" />
+    <Compile Include="Net\NetTools.cs" />
+    <Compile Include="Net\ReceiveAsyn.cs" />
+    <Compile Include="Net\ReceiveAsynDataPack.cs" />
+    <Compile Include="Net\SocketDelegate.cs" />
+    <Compile Include="Net\SocketState.cs" />
+    <Compile Include="Net\TcpClientSocket.cs" />
+    <Compile Include="Net\TcpClientSocketAsyn.cs" />
+    <Compile Include="Net\TcpServerSocket.cs" />
+    <Compile Include="Net\TcpServerSocketAsyn.cs" />
+    <Compile Include="Net\T_DataHead.cs" />
+    <Compile Include="OtherSource\NCharDet\Big5Statistics.cs" />
+    <Compile Include="OtherSource\NCharDet\EUCJPStatistics.cs" />
+    <Compile Include="OtherSource\NCharDet\EUCKRStatistics.cs" />
+    <Compile Include="OtherSource\NCharDet\EUCTWStatistics.cs" />
+    <Compile Include="OtherSource\NCharDet\GB2312Statistics.cs" />
+    <Compile Include="OtherSource\NCharDet\HtmlCharsetDetector.cs" />
+    <Compile Include="OtherSource\NCharDet\nsBIG5Verifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsCP1252Verifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsDetector.cs" />
+    <Compile Include="OtherSource\NCharDet\nsEUCJPVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsEUCKRVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsEUCSampler.cs" />
+    <Compile Include="OtherSource\NCharDet\nsEUCStatistics.cs" />
+    <Compile Include="OtherSource\NCharDet\nsEUCTWVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsGB18030Verifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsGB2312Verifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsHZVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsICharsetDetectionObserver.cs" />
+    <Compile Include="OtherSource\NCharDet\nsICharsetDetector.cs" />
+    <Compile Include="OtherSource\NCharDet\nsISO2022CNVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsISO2022JPVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsISO2022KRVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsPSMDetector.cs" />
+    <Compile Include="OtherSource\NCharDet\nsSJISVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsUCS2BEVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsUCS2LEVerifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsUTF8Verifier.cs" />
+    <Compile Include="OtherSource\NCharDet\nsVerifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AlgorithmType.cs" />
+    <Compile Include="Security\CRC32.cs" />
+    <Compile Include="Security\EncryptRe.cs" />
+    <Compile Include="Security\EncryptRe2.cs" />
+    <Compile Include="Security\EncryptReUrl.cs" />
+    <Compile Include="Security\EncryptUnRe.cs" />
+    <Compile Include="Security\IEncryptRe.cs" />
+    <Compile Include="Security\IEncryptUnRe.cs" />
+    <Compile Include="Security\MD5.cs" />
+    <Compile Include="Security\SymmetricHelper.cs" />
+    <Compile Include="Security\SymmetrySecret.cs" />
+    <Compile Include="Util\ByteEx.cs" />
+    <Compile Include="Util\ByteHelper.cs" />
+    <Compile Include="Util\CharsetHelper.cs" />
+    <Compile Include="Util\CompareHelper.cs" />
+    <Compile Include="Util\DateTimeExtension.cs" />
+    <Compile Include="Util\EnumHelper.cs" />
+    <Compile Include="Util\EnvironmentHelper.cs" />
+    <Compile Include="Util\Filter.cs" />
+    <Compile Include="Util\FilterLink.cs" />
+    <Compile Include="Util\GBpinyin.cs" />
+    <Compile Include="Util\MachineHelper.cs" />
+    <Compile Include="Util\ObjectConvert.cs" />
+    <Compile Include="Util\RandomHelper.cs" />
+    <Compile Include="Util\RegexHelper.cs" />
+    <Compile Include="Util\ResultU.cs" />
+    <Compile Include="Util\SelItem.cs" />
+    <Compile Include="Util\SerializableHelper.cs" />
+    <Compile Include="Util\SingletonHelper.cs" />
+    <Compile Include="Util\StringHelper.cs" />
+    <Compile Include="Util\TheadHelper.cs" />
+    <Compile Include="Util\TwoObj.cs" />
+    <Compile Include="Visit\IVisitPool.cs" />
+    <Compile Include="Visit\ThreadData.cs" />
+    <Compile Include="Visit\ThreadNum.cs" />
+    <Compile Include="Visit\VisitArithmetic.cs" />
+    <Compile Include="Visit\VisitBase.cs" />
+    <Compile Include="Visit\VisitData.cs" />
+    <Compile Include="Visit\VisitPoolQueue.cs" />
+    <Compile Include="Visit\VisitPoolStack.cs" />
+    <Compile Include="Visit\VisitSerializeObj.cs" />
+    <Compile Include="Visit\VisitState.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

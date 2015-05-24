@@ -1,0 +1,24 @@
+2014-08-28 21:34:55,773 [9944] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3335
+
+2014-08-28 22:29:40,708 [16948] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3376
+
+2014-08-28 23:16:05,940 [9468] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3442
+
+2014-08-28 23:22:47,639 [18716] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3442
+

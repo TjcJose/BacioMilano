@@ -1,0 +1,81 @@
+﻿@using Ad.Tools.Web;
+@model Ad.Model.VModel.VModel_BankDetailAdd
+<script type='text/x-dot-template' id='template_Add_BankDetail_foot'>
+    <div class='modal-footer'>
+        <div class='col-sm-8 text-center ad_form_result' id='show_Add_BankDetail_result'></div>
+        <input type='button' class='btn btn-primary submit_ml' value='添加' id='btn_Add_BankDetail' onclick='zf_Add_BankDetail()'>
+        <input type='button' class='btn btn-default' data-dismiss='modal' value='关闭' />
+    </div>
+</script>
+<div class='ad_form_common'>
+    @using (Ajax.BeginForm("Add_BankDetail", "Finance", null, new AjaxOptions { HttpMethod = "Post" }, new RouteValueDictionary { { "id", "frm_Add_BankDetail" }, { "class", "form-horizontal" }, { "role", "form" } }))
+    {
+        @Html.AntiForgeryToken()
+        <div class='form-group'>
+            @Html.LabelFor(m => m.WokeeBankShortName, new { @class = "col-sm-3 control-label" })
+            @Html.TextBoxFor(m => m.WokeeBankShortName, new { @class = "form-control", @readonly = true })
+            <button type="button" class="btn btn-link ad_mr_word" onclick="selectBankAccount()">选择账户</button>
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.WokeeBankShortName)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.DateTime, new { @class = "col-sm-3 control-label" })
+            @Html.TextBoxFor(m => m.DateTime, "{0:yyyy-MM-dd}",new { @class = "form-control ad_ctrl_date",@onfocus = "WdatePicker({ isShowClear: true, dateFmt:'yyyy-MM-dd' })" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.DateTime)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Income, new { @class = "col-sm-3 control-label" })
+            @Html.TextBoxFor(m => m.Income, new { @class = "form-control" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Income)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Expenditure, new { @class = "col-sm-3 control-label" })
+            @Html.TextBoxFor(m => m.Expenditure, new { @class = "form-control" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Expenditure)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.RemainderMoney, new { @class = "col-sm-3 control-label" })
+            @Html.TextBoxFor(m => m.RemainderMoney, new { @class = "form-control" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.RemainderMoney)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Remark, new { @class = "col-sm-3 control-label" })
+            @Html.TextAreaFor(m => m.Remark, new { @class = "form-control", @maxlength = "200" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Remark)</span>
+        </div>
+        @Html.HiddenFor(m=>m.WokeeBankId)
+        @Html.HiddenFor(m => m.Id)
+    }
+</div>
+<script type='text/javascript'>
+    var ad_form_Add_BankDetail = new $.ad.formA(
+    {
+        form_id: 'frm_Add_BankDetail',
+        resultCtrlId: 'show_Add_BankDetail_result',
+        template_id: 'template_Add_BankDetail_foot',
+        template_btn_id: 'btn_Add_BankDetail'
+    });
+    ad_form_Add_BankDetail.template_btn_load();
+    function zf_Add_BankDetail() {
+        ad_form_Add_BankDetail.submit();
+    }
+
+    function selectBankAccount() {
+        $.ad.dialog_modal("/Finance/WokeeBank_Select/", "选择礼品", "加载中...", function (e) {
+            var obj = $.ad.getModelValue();
+            if ($.ad.isDefined(obj)) {
+                $("#WokeeBankId").val(obj.Id);
+                $("#WokeeBankShortName").val(obj.ShortName);
+            }
+        }, "800");
+    }
+</script>
+<style>
+    #Remark {
+        text-align: left;
+        width: 200px;
+        height: 100px;
+        max-width: 200px;
+        max-height: 100px;
+        resize: none;
+    }
+</style>

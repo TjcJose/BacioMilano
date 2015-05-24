@@ -1,0 +1,60 @@
+﻿@using Ad.Tools.Web;
+@using Ad.Model.VModel;
+@model ForConsultationTripModel
+<script type='text/x-dot-template' id='template_Select_Trip_foot'>
+    <div class='modal-footer'>
+        <div class='col-sm-8 text-center ad_form_result' id='show_Select_Trip_result'></div>
+        <input type='button' class='btn btn-primary submit_ml' value='添加' id='btn_Select_Trip' onclick='zf_Select_Trip()'>
+        <input type='button' class='btn btn-default' data-dismiss='modal' value='关闭' />
+    </div>
+</script>
+<div class='ad_form_common'>
+    <form class="form-horizontal" id="select_form_Trip">
+        <div class='form-group'>
+            @Html.LabelFor(m => m.TripDate, new { @class = "col-sm-2 control-label" })
+            @Html.TextBoxFor(m => m.TripDate, new { @class = "form-control", onfocus = "WdatePicker({ dateFmt: 'yyyy-MM-dd', isShowClear: true })" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.TripDate)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.StartTripPlace, new { @class = "col-sm-2 control-label" })
+            @*@Html.TextBoxFor(m => m.StartTripPlace, new { @class = "form-control", @onkeyup = "this.value = this.value.toUpperCase()" ,@maxlength="3"})*@
+            @Html.TextBoxFor(m => m.StartTripPlace, new { @class = "form-control", @onkeyup = "tripplacecheck(this)", @maxlength = "3" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.StartTripPlace)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.EndTripPlace, new { @class = "col-sm-2 control-label" })
+            @*@Html.TextBoxFor(m => m.EndTripPlace, new { @class = "form-control", @onkeyup = "this.value = this.value.toUpperCase()", @maxlength = "3" })*@
+            @Html.TextBoxFor(m => m.EndTripPlace, new { @class = "form-control", @onkeyup = "tripplacecheck(this)", @maxlength = "3" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.EndTripPlace)</span>
+        </div>
+    </form>
+ </div>
+
+
+<script>
+    $.ad.set_validator_showLabel_style(1);
+    var amode = new Object();
+ var ad_form_Select_Trip = new $.ad.formA(
+{
+    form_id: 'select_form_Trip',
+    resultCtrlId: 'show_Select_Trip_result',
+    template_id: 'template_Select_Trip_foot',
+    template_btn_id: 'btn_Select_Trip'
+});
+    ad_form_Select_Trip.template_btn_load();
+
+    function zf_Select_Trip() {
+        if (!$("#select_form_Trip").valid()) {
+            return;
+        } else {
+            amode.TripDate = $("#TripDate").val();
+            amode.StartTripPlace = $("#StartTripPlace").val();
+            amode.EndTripPlace = $("#EndTripPlace").val();
+            dcall();
+            $.ad.setModelValue(amode);
+            $.ad.dialog_close();
+        }
+
+    }
+
+</script>

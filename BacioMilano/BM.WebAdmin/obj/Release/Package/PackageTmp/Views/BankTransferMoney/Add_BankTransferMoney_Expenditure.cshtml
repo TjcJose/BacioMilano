@@ -1,0 +1,103 @@
+﻿@using Ad.Tools.Web;
+@using Ad.Model.DbModel;
+@model Ad.Model.VModel.VModel_BankTransferMoneyAdd
+<script type='text/x-dot-template' id='template_Add_BankTransferMoney_foot2'>
+    <div class='modal-footer'>
+        <div class='col-sm-8 text-center ad_form_result' id='show_Add_BankTransferMoney_result2'></div>
+        <input type='button' class='btn btn-primary submit_ml' value='添加' id='btn_Add_BankTransferMoney2' onclick='zf_Add_BankTransferMoney()'>
+        <input type='button' class='btn btn-default' data-dismiss='modal' value='关闭' id="btn_close_BankTransferMoney2" />
+    </div>
+</script>
+<div class='ad_form_common'>
+    @using (Ajax.BeginForm("Add_BankTransferMoney_Expenditure", "BankTransferMoney", null, new AjaxOptions { HttpMethod = "Post" }, new RouteValueDictionary { { "id", "frm_Add_BankTransferMoney2" }, { "class", "form-horizontal" }, { "role", "form" } }))
+    {
+        @Html.AntiForgeryToken()
+        <div class='form-group'>
+            @Html.LabelFor(m => m.TransactionDate, new { @class = "col-sm-2 control-label" })
+            @Html.TextBoxFor(m => m.TransactionDate, new { @class = "form-control", @onfocus = "WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear: true })" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.TransactionDate)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.AccountId, new { @class = "col-sm-2 control-label" })
+            @Html.SelectList((IEnumerable<T_WokeeBank>)ViewBag.WokeeBankList, T_WokeeBank_Description.Id, T_WokeeBank_Description.ShortName,
+                                      "AccountId", true, "", null, new { @class = "form-control" ,@onchange = "selectBankShortName(this)"  })
+            @Html.HiddenFor(m => m.AccountName)
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.AccountId)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Expenditure, new { @class = "col-sm-2 control-label" })
+            @Html.TextBoxFor(m => m.Expenditure, new { @class = "form-control",@onkeyup = "floatNum(this)"})
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Expenditure)</span>
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Remark, new { @class = "col-sm-2 control-label" })
+            @Html.TextAreaFor(m => m.Remark, new { @class = "form-control" })
+            <span class='pull-left'>@Html.ValidationMessageFor(m => m.Remark)</span>
+        </div>
+    }
+</div>
+<style>
+    #Remark {
+        text-align:left;
+        width: 200px;
+        height: 100px;
+        resize: none;
+    }
+</style>
+
+<script type='text/javascript'>
+    var ad_form_Add_BankTransferMoney2 = new $.ad.formA(
+    {
+        form_id: 'frm_Add_BankTransferMoney2',
+        resultCtrlId: 'show_Add_BankTransferMoney_result2',
+        template_id: 'template_Add_BankTransferMoney_foot2',
+        template_btn_id: 'btn_Add_BankTransferMoney2'
+    });
+    ad_form_Add_BankTransferMoney2.template_btn_load();
+    function zf_Add_BankTransferMoney() {
+        //ad_form_Add_BankTransferMoney2.submit();
+        bankTransferExpenditureSubmit();
+    }
+
+    function bankTransferExpenditureSubmit() {
+        var form = $("#frm_Add_BankTransferMoney2");
+        var resultCtrl = $("#show_Add_BankTransferMoney_result2");
+        ad_form_Add_BankTransferMoney2.reset_validation();
+        if (!form.valid()) {
+            return;
+        }
+
+        $.ad.wait();
+        $.post("/BankTransferMoney/Add_BankTransferMoney_Expenditure", form.serializeArray()).done(function (datas) {
+            if (!datas.IsOK) {
+                form.validate({}).showErrors(datas.Data);
+                var msg = $.ad.isNullStr(datas.Msg) ? "操作失败" : datas.Msg;
+                ad_form_Add_BankTransferMoney2.setError(msg);
+            }
+            else {
+                var msg = $.ad.isNullStr(datas.Msg) ? "操作成功" : datas.Msg;
+                ad_form_Add_BankTransferMoney2.setSuccess(msg);
+                $("#btn_close_BankTransferMoney2").click();
+            }
+        }).complete(function (datas) {
+            search_BankTransferMoney();
+            $.unblockUI();
+        });
+    }
+
+    function selectBankShortName(ctr) {
+        var shortnamejq = $("#AccountName");
+        if (ctr.selectedIndex == 0) {
+            shortnamejq.val("");
+        } else {
+            shortnamejq.val(ctr.options[ctr.selectedIndex].text);
+        }
+    }
+
+    function floatNum(ctr) {
+        ctr.value = ctr.value.replace(/[^\d.]/g, "");
+        ctr.value = ctr.value.replace(/^\./, "");
+        ctr.value = ctr.value.replace(/\.{2,}/g, "\.");
+        ctr.value = ctr.value.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
+    }
+</script>

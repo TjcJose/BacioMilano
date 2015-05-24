@@ -1,0 +1,1271 @@
+2014-09-16 09:33:46,899 [7876] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:33:47,117 [7876] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:33:47,241 [7876] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:33:47,353 [7876] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:33:47,463 [7876] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:33:47,592 [7876] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:33:47,729 [7876] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:33:47,832 [7876] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:33:47,949 [7876] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:33:48,051 [7876] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:35:28,813 [14104] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:35:28,905 [14104] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:35:28,992 [14104] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:35:29,101 [14104] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:35:29,179 [14104] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:35:29,261 [14104] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:35:29,351 [14104] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:35:29,468 [14104] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:35:29,591 [14104] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:35:29,718 [14104] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:36:16,453 [9588] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:36:16,551 [9588] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:36:16,628 [9588] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:36:16,719 [9588] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:36:16,815 [9588] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:36:16,928 [9588] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:36:17,005 [9588] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:36:17,091 [9588] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:36:17,180 [9588] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:36:17,259 [9588] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:05,516 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:05,599 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:05,687 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:05,769 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:05,861 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:05,965 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:06,046 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:06,139 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:06,230 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:06,313 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:42,991 [2296] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:43,073 [2296] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:43,156 [2296] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:43,237 [2296] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:43,318 [2296] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:43,420 [2296] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:43,500 [2296] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:43,568 [2296] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:43,656 [2296] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:43,742 [2296] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:46,696 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:46,776 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:46,862 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:46,955 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:47,054 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:47,156 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:47,232 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:47,337 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:47,508 [1328] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:47,663 [1328] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:47,705 [10864] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:47,803 [10864] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:47,901 [10864] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:48,006 [10864] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:48,118 [10864] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:48,230 [10864] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:48,329 [10864] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:48,433 [10864] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:37:48,557 [10864] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:37:48,649 [10864] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:38:17,282 [13524] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:38:17,379 [13524] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:38:17,459 [13524] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:38:17,533 [13524] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:38:17,661 [13524] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:38:17,752 [13524] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:38:17,835 [13524] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:38:17,961 [13524] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:38:18,131 [13524] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:38:18,227 [13524] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:41:04,667 [13200] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:41:04,751 [13200] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:41:04,849 [13200] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:41:04,935 [13200] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:41:05,007 [13200] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:41:05,106 [13200] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:41:05,192 [13200] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:41:05,288 [13200] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:41:05,382 [13200] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:41:05,488 [13200] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:42:28,822 [2344] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:42:28,938 [2344] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:42:29,019 [2344] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:42:29,118 [2344] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:42:29,210 [2344] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:42:29,313 [2344] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:42:29,400 [2344] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:42:29,494 [2344] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:42:29,591 [2344] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:42:29,671 [2344] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:43:14,386 [2604] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:43:14,475 [2604] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:43:14,559 [2604] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:43:14,646 [2604] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:43:14,720 [2604] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:43:14,800 [2604] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:43:14,893 [2604] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:43:14,982 [2604] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:43:15,056 [2604] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:43:15,135 [2604] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:43:15,206 [2604] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:43:15,295 [2604] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 09:43:15,373 [2604] - 
+System.Nullable`1[System.Int32] DepartMentId
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 228
+
+2014-09-16 09:43:15,480 [2604] - 
+DepartMentName
+System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Ad.DA.ModelConvertUtility.ColumnUseReaderToModel[T](T& model, IColumnUseReader reader) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\ModelConvertUtility.cs:行号 247
+
+2014-09-16 14:15:12,352 [9328] - 
+不能将值 NULL 插入列 'IsDealt'，表 'wokee.dbo.T_ShmHolidayType'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllShortMessage.InsertToShmHolidayType(T_ShmHolidayType entity) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllShortMessage.cs:行号 336
+

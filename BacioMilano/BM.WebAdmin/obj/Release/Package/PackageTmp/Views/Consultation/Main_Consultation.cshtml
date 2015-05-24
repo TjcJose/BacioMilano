@@ -1,0 +1,152 @@
+﻿@* Main_Consultation *@
+
+@using Ad.Model.VModel;
+@using Ad.Model.DbModel;
+@using Ad.Fw;
+@using Ad.Tools.Web;
+@using Ad.Util;
+
+@model VModel_ConsultationList
+
+@{
+    var config = ConfigHelper.Config_Instance;
+}
+
+@{
+    bool isAdd = this.ViewBag.isAdd;
+    bool isModify = this.ViewBag.Modify;
+}
+
+<script id='template_search_Consultation_id' type='text/x-dot-template'>
+    <table class='table table-striped table-bordered table-hover'>
+        <thead>
+            <tr>
+                <th nowrap='nowrap'>ID</th>
+                <th nowrap='nowrap'>咨询人</th>
+                @*<th nowrap='nowrap'>电话</th>*@
+                <th nowrap='nowrap'>行程</th>
+                <th nowrap='nowrap'>舱位</th>
+                <th nowrap='nowrap'>成人</th>
+                <th nowrap='nowrap'>儿童</th>
+                <th nowrap='nowrap'>婴儿</th>
+                <th nowrap='nowrap'>报价</th>
+                @*<th nowrap='nowrap'>客户来源</th>*@
+                @if (isModify)
+                {
+                <th nowrap='nowrap'>修改</th> }
+            </tr>
+        </thead>
+        <tbody>
+            {{~it.Models :data:index}}
+            <tr>
+                <td>{{!data.DisplayId}}</td>
+                <td>{{!data.ConsultantName}}</td>
+                @*<td>{{!data.Telephone}}</td>*@
+                <td>{{!data.Trip}}</td>
+                <td>{{!data.CabinName}}</td>
+                <td>{{!data.AdultNum}}</td>
+                <td>{{!data.ChildrenNum}}</td>
+                <td>{{!data.BabyNum}}</td>
+                <td>{{!data.Quotation}}</td>
+                @*<td>{{!data.Customer_sourceId}}</td>*@
+                @if (isModify)
+                {
+                <td><a href='#' onclick='abtn_view_Consultation({{=index}})'>查看</a></td> }
+            </tr>
+            {{~}}
+        </tbody>
+    </table>
+    <div id='div_search_splitpage_Consultation_id' class='pagination pagination-sm'></div>
+</script>
+
+<form method="post" id="search_frm_Consultation" class="form-horizontal" role="form">
+
+    <div class="form-group">
+        @Html.TextBoxFor(m => m.InsertDate_1S, new { @class = "form-control", @placeholder = "Date1", @onfocus = "WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear: true })" })
+        <label for="" class="control-label"> <= 创建日期 <= </label>
+        @Html.TextBoxFor(m => m.InsertDate_1S, new { @class = "form-control", @placeholder = "Date2", @onfocus = "WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear: true })" })
+
+        @Html.LabelFor(m => m.ConsultantName_1S, new { @class = "control-label ad_mr_word" })
+        @Html.TextBoxFor(m => m.ConsultantName_1S, new { @class = "form-control"})
+
+        @Html.LabelFor(m => m.Telephone_1S, new { @class = "control-label ad_mr_word" })
+        @Html.TextBoxFor(m => m.Telephone_1S, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.QQ_1S, new { @class="control-label ad_mr_word"})
+        @Html.TextBoxFor(m => m.QQ_1S, new { @class="form-control"})
+
+        @Html.LabelFor(m => m.Wechat_1S, new { @class = "control-label ad_mr_word" })
+        @Html.TextBoxFor(m => m.Wechat_1S, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.HiddenFor(m => m.IsManagerSearch_1S)
+        <input type="button" id="btn_search_by_manager_id" value="本人录入" class="btn btn-default ad_mr_word" />
+
+        <input type='button' id='btnSearch_Consultation' value='筛选' class='btn btn-default ad_mr_word' />
+        @if (isAdd)
+        {<input type='button' class='btn btn-default submit_ml' value='添加' onclick='abtn_Add_Consultation()'>
+            <script>
+                function abtn_Add_Consultation(){
+                    var title = '添加咨询单';
+                    var url = '/Consultation/Add_Consultation'
+                    $.ad.dialog_modal(url, title, '加载中...', function (e) {
+                        if ($.ad.getOperValue()) {
+                            search_Consultation();
+                        }
+                    },"800");
+                }
+            </script>
+        }
+    </div>
+</form>
+<div id='divSearchResult_Consultation' class='ad_table'></div>
+
+
+
+<script>
+    var datas_Consultation;
+    function search_Consultation() {
+        $.post('/Consultation/Split_Consultation', $('#search_frm_Consultation').serializeArray()).done(function (datas){
+            datas_Consultation = datas;
+            var url = '/Consultation/Split_Consultation'
+            var tempFn = doT.template($('#template_search_Consultation_id').html());
+            var html = tempFn(datas);
+            $('#divSearchResult_Consultation').html(html);
+            $.ad.split_page(datas.PageIndex, datas.PageCount, datas.PageSize, datas.RecordCount, 'pageIndex_Consultation', 'search_frm_Consultation', 'div_search_splitpage_Consultation_id', search_Consultation)
+        });
+    }
+
+    $('#btnSearch_Consultation').click(function (e)
+    {
+        $("#IsManagerSearch_1S").val(0);
+        $('#pageIndex_Consultation').val(1);
+        search_Consultation();
+    });
+
+    $('#btn_search_by_manager_id').click(function(e)
+    {
+        $("#IsManagerSearch_1S").val(1);
+        $('#pageIndex_Consultation').val(1);
+        search_Consultation();
+    });
+    search_Consultation();
+</script>
+
+@if (isModify)
+{
+    <script>
+        function abtn_view_Consultation(index)
+        {
+            var datas = datas_Consultation.Models
+            var Id = datas[index].Id;
+            var title = '查看咨询单';
+            var url = '/Consultation/view_Consultation?Id='+Id;
+            $.ad.dialog_modal(url, title, '加载中...', function (e) {
+                if ($.ad.getOperValue()) {
+                    search_Consultation();
+                }
+            },"800");
+        }
+    </script>
+}

@@ -1,0 +1,130 @@
+﻿@z_background_color: #f8f8f8;
+@z_label_color:#909090;
+@z_error_color:#b94a48;
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: @z_background_color;
+    font-size:13px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+label {
+    color: @z_label_color;
+    font-weight: normal;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: @z_error_color;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid @z_error_color;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.ad_head_shadow{
+    text-shadow: 0 1px 2px fade(#000, 50%);
+    -webkit-text-shadow: 0 1px 2px fade(#000, 50%);
+}
+
+.ad_table
+{
+    padding:10px;
+}
+
+.ad_table td
+{
+    text-align:left;
+}
+
+.ad_form_common .form-control{
+    width:200px;
+    float:left !important;
+    padding:6px;
+}
+
+.ad_form_common .control_large{
+    width:400px;
+}
+
+.ad_form_common .w_auto{
+    width:auto;
+}
+
+.ad_form_common .mt_0{
+    margin-top:0px;
+}
+
+.ad_form_common span
+{
+    padding-left:1px; display:inline-block; 
+    line-height:30px;
+}
+
+.ad_form_result{
+    line-height:30px;
+}
+
+.ad_mr_word
+{
+    margin-right: 5px;
+}
+
+.ad_ml_word{
+    margin-left:5px;
+}
+
+.ad_list_focus{
+    background-color:#eeeeee
+}
+
+.ad_ctrl_datetime{
+    background: url("datePicker.gif") no-repeat scroll right 5px center; width:200px;
+}
+
+.ad_ctrl_date {
+    background: url("datePicker.gif") no-repeat scroll right 5px center; width:120px;
+}
+
+.ad_form_common1 {
+    font-size:12px;
+}
+
+.ad_form_common1 .form-control{
+    width:100px;
+    float:left !important;
+}
+
+.ad_form_common1 .err_span{
+    width: 16px;
+}
+
+.ad_form_common1 .lab{
+    width: 70px;
+}
+
+.ad_ctrl_paddingBottom{
+    padding-bottom:10px;
+}

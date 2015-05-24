@@ -1,0 +1,72 @@
+2014-08-30 11:31:09,209 [15460] - 
+excel export financialorder error
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: “object”未包含“get_Range”的定义
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 CallSite.Target(Closure , CallSite , Worksheet , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3375
+
+2014-08-30 11:33:20,456 [13956] - 
+excel export financialorder error
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: “object”未包含“get_Range”的定义
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 CallSite.Target(Closure , CallSite , Worksheet , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3375
+
+2014-08-30 11:33:58,780 [17468] - 
+excel export financialorder error
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: “object”未包含“get_Range”的定义
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 CallSite.Target(Closure , CallSite , Worksheet , Object , Object )
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3375
+
+2014-08-30 11:36:05,531 [14708] - 
+excel export financialorder error
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: “object”未包含“get_Range”的定义
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 CallSite.Target(Closure , CallSite , Worksheet , Object , Object )
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3375
+
+2014-08-30 11:37:09,963 [13956] - 
+excel export financialorder error
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: “object”未包含“get_Range”的定义
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 CallSite.Target(Closure , CallSite , Worksheet , Object , Object )
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3375
+
+2014-08-30 11:53:07,949 [6980] - 
+excel export financialorder error
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: “object”未包含“get_Range”的定义
+   在 CallSite.Target(Closure , CallSite , ComObject , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 CallSite.Target(Closure , CallSite , Worksheet , Object , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3451
+
+2014-08-30 11:58:00,720 [15324] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3477
+
+2014-08-30 12:01:49,581 [17372] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3471
+
+2014-08-30 13:25:15,374 [11900] - 
+excel export financialorder error
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Excel._Workbook.Close(Object SaveChanges, Object Filename, Object RouteWorkbook)
+   在 Ad.Web.Controllers.OrderManagementController.FinancialOrListExeclExport2(VModel_MainOrderForFinancial model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\OrderManagementController.cs:行号 3471
+

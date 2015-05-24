@@ -1,0 +1,146 @@
+2014-08-11 16:35:21,518 [12156] - 
+经过订单备注
+
+2014-08-11 16:35:43,800 [12156] - 
+经过 插入OrderMembReceived
+
+2014-08-11 16:35:44,058 [12156] - 
+bankDetailEntity:Ad.Model.DbModel.T_BankDetail
+
+2014-08-11 16:35:44,093 [12156] - 
+经过 插入bankdetail
+
+2014-08-11 16:35:44,093 [12156] - 
+经过 收取会员打入的钱
+
+2014-08-11 16:35:44,093 [12156] - 
+经过 给供应商打钱
+
+2014-08-11 16:35:44,093 [12156] - 
+经过 插入到会员虚拟账户
+
+2014-08-11 16:49:47,273 [4408] - 
+经过订单备注
+
+2014-08-11 16:49:55,467 [4408] - 
+经过 插入OrderMembReceived
+
+2014-08-11 16:49:55,560 [4408] - 
+bankDetailEntity:Ad.Model.DbModel.T_BankDetail
+
+2014-08-11 16:50:04,469 [4408] - 
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllOrderManagement.AccountsBookOperate(AccountsBookOperateModel model, Nullable`1 managerId) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 2803
+将截断字符串或二进制数据。
+语句已终止。
+
+2014-08-11 16:50:51,546 [11716] - 
+经过订单备注
+
+2014-08-11 16:50:59,004 [11716] - 
+经过 插入OrderMembReceived
+
+2014-08-11 16:51:45,138 [11716] - 
+bankDetailEntity:Ad.Model.DbModel.T_BankDetail
+
+2014-08-11 16:56:34,892 [11716] - 
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllOrderManagement.AccountsBookOperate(AccountsBookOperateModel model, Nullable`1 managerId) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 2803
+将截断字符串或二进制数据。
+语句已终止。
+
+2014-08-11 16:56:40,678 [9972] - 
+经过订单备注
+
+2014-08-11 16:56:41,588 [9972] - 
+经过 插入OrderMembReceived
+
+2014-08-11 16:56:42,443 [9972] - 
+bankDetailEntity:Ad.Model.DbModel.T_BankDetail
+
+2014-08-11 16:56:46,882 [9972] - 
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Insert(List`1 fields, List`1 fieldValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 78
+   在 Ad.DA.MappingBase`1.Insert(T entity, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 435
+   在 Ad.Fw.BllOrderManagement.AccountsBookOperate(AccountsBookOperateModel model, Nullable`1 managerId) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 2803
+将截断字符串或二进制数据。
+语句已终止。
+
+2014-08-11 16:58:29,433 [14992] - 
+经过订单备注
+
+2014-08-11 16:58:30,910 [14992] - 
+经过 插入OrderMembReceived
+
+2014-08-11 16:58:31,790 [14992] - 
+bankDetailEntity:Ad.Model.DbModel.T_BankDetail
+
+2014-08-11 17:02:27,059 [9744] - 
+经过订单备注
+
+2014-08-11 17:02:27,918 [9744] - 
+经过 插入OrderMembReceived
+
+2014-08-11 17:02:28,381 [9744] - 
+bankDetailEntity:Ad.Model.DbModel.T_BankDetail
+
+2014-08-11 17:02:28,879 [9744] - 
+经过 插入bankdetail
+
+2014-08-11 17:02:28,879 [9744] - 
+经过 收取会员打入的钱
+
+2014-08-11 17:02:28,880 [9744] - 
+经过 给供应商打钱
+
+2014-08-11 17:02:28,880 [9744] - 
+经过 插入到会员虚拟账户
+
+2014-08-11 18:19:47,637 [15600] - 
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Ad.DA.OperationBase.ExecuteNonQuery(String commandText, List`1 parameterNames, List`1 parameterValues, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\OperationBase.cs:行号 48
+   在 Ad.DA.MappingSqlServer`1.Update(List`1 fields, List`1 fieldValues, Object[] values, String whereSql, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingSqlServer.cs:行号 154
+   在 Ad.DA.MappingBase`1.Update(Dictionary`2 propertiesValues, String whereSql, Object[] values, IDbConnection conn, IDbTransaction trans) 位置 d:\zzj\Code2\wokee\Code2\Ad.Tools\DA\MappingBase.cs:行号 302
+   在 Ad.Fw.BllOrderManagement.AccountsBookOperate(AccountsBookOperateModel model, Nullable`1 managerId) 位置 d:\zzj\Code2\wokee\Code2\Ad.Fw\BllOrderManagement.cs:行号 2767
+不能将值 NULL 插入列 'Refund'，表 'wokee.dbo.T_MainOrder'；列不允许有 Null 值。UPDATE 失败。
+语句已终止。
+

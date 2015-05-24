@@ -1,0 +1,8 @@
+2014-08-26 08:50:54,107 [2064] - 
+不允许使用邮箱名称。 服务器响应为:authentication is required,smtp1,C8mowEDZf3mH2vtTm2wDAQ--.847S3 1409014408
+   在 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   在 System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   在 System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   在 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   在 Ad.Web.Controllers.TemplateController.OrderDetailMail(OrderMailDetailModel model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\TemplateController.cs:行号 296
+

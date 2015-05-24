@@ -1,0 +1,145 @@
+﻿@using Ad.Tools.Web;
+@using Ad.Model.DbModel;
+@model Ad.Model.VModel.VModel_ConsultationView
+@{
+    bool isCsView = this.ViewBag.IsCsView;
+    bool isMaView = this.ViewBag.IsMaView;
+    long managerId = this.ViewBag.ManagerId;
+    var departmentId = this.ViewBag.Department; 
+}
+<script type='text/x-dot-template' id='template_View_Consultation_foot'>
+    <div class='modal-footer'>
+        <div class='col-sm-8 text-center ad_form_result' id='show_View_Consultation_result'></div>
+        <input type='button' class='btn btn-default' data-dismiss='modal' value='关闭' />
+    </div>
+</script>
+<div class='ad_form_common'>
+    @using (Ajax.BeginForm("View_Consultation", "Consultation", null, new AjaxOptions { HttpMethod = "Post" }, new RouteValueDictionary { { "id", "frm_View_Consultation" }, { "class", "form-horizontal" }, { "role", "form" } }))
+    {
+        @Html.AntiForgeryToken()
+        @*if (isCsView)
+        {
+            <div class='form-group'>
+                @Html.LabelFor(m => m.DepartMentName, new { @class = "col-sm-1 control-label" })
+                @Html.TextBoxFor(m => m.DepartMentName, new { @class = "form-control", @readonly = true })
+               </div>
+        }*@
+        <div class='form-group'>
+                @Html.LabelFor(m => m.DepartMentName, new { @class = "col-sm-1 control-label" })
+                @Html.TextBoxFor(m => m.DepartMentName, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.ManagerName, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.ManagerName, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.ConsultantName, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.ConsultantName, new { @class = "form-control", @readonly=true })
+        </div>
+        if (isCsView || (isMaView && departmentId == Model.DepartMentId) || managerId == Model.ManagerId)
+        {
+             <div class='form-group'>
+                @Html.LabelFor(m => m.Telephone, new { @class = "col-sm-1 control-label" })
+                @Html.TextBoxFor(m => m.Telephone, new { @class = "form-control", @readonly = true })
+            </div>
+            <div class ='form-group'>
+                @Html.LabelFor(m => m.Wechat, new { @class = "col-sm-1 control-label" })
+                @Html.TextBoxFor(m => m.Wechat, new { @class = "form-control", @readonly = true })
+           </div>
+           <div class ='form-group'>
+                @Html.LabelFor(m => m.QQNumber, new { @class = "col-sm-1 control-label" })
+                @Html.TextBoxFor(m => m.QQNumber, new { @class = "form-control", @readonly = true })
+           </div>
+        }
+        else
+        {
+             <div class='form-group'>
+                @Html.LabelFor(m => m.Telephone, new { @class = "col-sm-1 control-label" })
+                @Html.TextBox("Telephone","*************", new { @class = "form-control", @readonly = true })
+            </div>
+            <div class ='form-group'>
+                @Html.LabelFor(m => m.Wechat, new { @class = "col-sm-1 control-label" })
+                @Html.TextBox("Wechat","*************", new { @class = "form-control", @readonly = true })
+           </div>
+           <div class ='form-group'>
+                @Html.LabelFor(m => m.QQNumber, new { @class = "col-sm-1 control-label" })
+                @Html.TextBox("QQNumber", "*************", new { @class = "form-control", @readonly = true })
+           </div>
+        }
+        @*<div class='form-group'>
+            @Html.LabelFor(m => m.Telephone, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.Telephone, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class ='form-group'>
+            @Html.LabelFor(m => m.Wechat, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.Wechat, new { @class = "form-control", @readonly = true })
+       </div>
+       <div class ='form-group'>
+            @Html.LabelFor(m => m.QQNumber, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.QQNumber, new { @class = "form-control", @readonly = true })
+       </div>*@
+        <div class='form-group'>
+            <label class="col-sm-1 control-label">行程</label>
+            <input type="text" class="form-control" value="@Model.TrimList[0].TripDate" readonly />
+            <input type="text" class="form-control" value="@Model.TrimList[0].StartPlace" readonly  style="margin-left:20px;width:100px;" />
+            <label class="control-label" style="margin-left:20px;float:left">TO</label>
+            <input type="text" class="form-control" value="@Model.TrimList[0].EndPlace" style="margin-left:20px;width:100px;" readonly />
+        </div>
+        for (int i = 1; i < Model.TrimList.Count(); i++)
+        {
+            <div class='form-group'>
+            <label class='col-sm-1 control-label'></label>
+            <input type="text" class="form-control" value="@Model.TrimList[i].TripDate" readonly />
+                <input type="text" class="form-control" value="@Model.TrimList[i].StartPlace" readonly style="margin-left:20px;width:100px;" />
+            <label class="control-label" style="margin-left:20px;float:left">TO</label>
+                <input type="text" class="form-control" value="@Model.TrimList[i].EndPlace" style="margin-left:20px;width:100px;" readonly />
+        </div>
+        }
+        <div class='form-group' id="aftertripdiv">
+            @Html.LabelFor(m => m.Cabin_seatId, new { @class = "col-sm-1 control-label" })
+            @Html.SelectList((IEnumerable<T_CustomerType>)ViewBag.CustomerTypeList, T_CustomerType_Description.CustomerTypeId, T_CustomerType_Description.CustomerTypeName, "Cabin_seatId", true, "", Model.Cabin_seatId, new { @class = "form-control", @disabled = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.AdultNum, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.AdultNum, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.ChildrenNum, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.ChildrenNum, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.BabyNum, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.BabyNum, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Quotation, new { @class = "col-sm-1 control-label" })
+            @Html.TextBoxFor(m => m.Quotation, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Customer_sourceId, new { @class = "col-sm-1 control-label" })
+            @Html.SelectList((IEnumerable<T_CustomerSourceType>)ViewBag.CustomerSourceTypeList, T_CustomerSourceType_Description.CustomerSourceId, T_CustomerSourceType_Description.CustomerSourceName, "Customer_sourceId", true, "", Model.Customer_sourceId, new { @class = "form-control", @disabled = true })
+        </div>
+        <div class='form-group'>
+            @Html.LabelFor(m => m.Remark, new { @class = "col-sm-1 control-label" })
+            @Html.TextAreaFor(m => m.Remark, new { @class = "form-control",@readonly=true })
+        </div>
+    }
+</div>
+<style>
+    #Remark {
+        text-align: left;
+        width: 200px;
+        height: 100px;
+        resize: none;
+    }
+</style>
+<script>
+var ad_form_View_Consultation = new $.ad.formA(
+{
+    form_id: 'frm_View_Consultation',
+    resultCtrlId: 'show_View_Consultation_result',
+    template_id: 'template_View_Consultation_foot',
+    validatorStyle: 2
+});
+    ad_form_View_Consultation.template_btn_load();
+</script>

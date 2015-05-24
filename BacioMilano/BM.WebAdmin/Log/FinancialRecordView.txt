@@ -1,0 +1,544 @@
+@using Ad.Model.VModel;
+@using Ad.Model.DbModel;
+@using Ad.Fw;
+@using Ad.Tools.Web;
+@using Ad.Util;
+@using Ad.Model.EnumType;
+
+@model VModel_FinancialBooks
+
+@{
+    var config = ConfigHelper.Config_Instance;
+
+    int receiveMoneyCount = 0;
+    if (null != Model.OrderMembReceivedList && 0<Model.OrderMembReceivedList.Count)
+    {
+        receiveMoneyCount = Model.OrderMembReceivedList.Count;
+    }
+    bool hasSupplierPayment = false;
+    foreach (var item in Model.OrderSuppSettlementList)
+    {
+        if (1 == item.SettlementMarker)
+        {
+            hasSupplierPayment = true;
+            break;
+        }
+    }
+    var willreceivedmoney = Model.MainOrder.PricesTotal - Model.MainOrder.AlreadyReceivables - Model.MainOrder.Refund - Model.MainOrder.Discount;
+    if(0 > willreceivedmoney){willreceivedmoney = 0;}
+    var ticketCount = @Model.ticketsNumList.Count;
+}
+<script type='text/x-dot-template' id='template_check_ticketMoney_foot'>
+    <div class='modal-footer'>
+        @if (0 == receiveMoneyCount && !hasSupplierPayment)
+        {
+            <div class='col-sm-2 text-center ad_form_result' >
+                <input type="button" style="float:left;" class="btn btn-danger" value="订单取消" id="btn_cancel_order" onclick="financialCancelOrder()" />
+            </div>
+        }
+        <div class='col-sm-8 text-center ad_form_result' id='show_check_ticketMoney_result'></div>
+        @if (1 != Model.MainOrder.IsTicketEnd)
+        {
+            <input type='button' class='btn btn-primary submit_ml' value='保存' id='btn_check_ticketmoney' onclick='saveOrderMoneyMessage()'>
+        }
+        <input type='button' class='btn btn-default' data-dismiss='modal' value='关闭' id="btn_close_this_financialview"/>
+    </div>
+</script>
+@using (Ajax.BeginForm("FinancialRecordView", "OrderManagement", null, new AjaxOptions { HttpMethod = "Post" }, new RouteValueDictionary { { "id", "frm_check_ticketMoney" }, { "class", "form-horizontal" }, { "role", "form" } }))
+{ 
+        @Html.AntiForgeryToken()
+        @*<div class="form-group">
+            @Html.Label("总成本", new { @class = "col-sm-1 control-label pnr-label" })
+            @Html.TextBoxFor(m => m.MainOrder.CostTotal, new { @class = "form-control col-sm-2",@readonly="true"})
+            <span class="pull-left pnr-error">@Html.ValidationMessageFor(m => m.pNRAddModel.PNR)</span>
+        </div>*@
+    @Html.HiddenFor(m => m.OrderIdZ);
+    <fieldset>
+    <legend>
+        票号列表
+    </legend>
+    <table class='table table-striped table-bordered table-hover'>
+        <tr>
+            <th nowrap="nowrap" style="text-align:center;">票号</th>
+            <th nowrap="nowrap" style="text-align:center;">证件</th>
+            <th nowrap="nowrap" style="text-align:center;">常旅客</th>
+            <th nowrap="nowrap" style="text-align:center;">证件号</th>
+            @*<th nowrap="nowrap" style="text-align:center;">票款</th>
+            <th nowrap="nowrap" style="text-align:center;">成本</th>
+            <th nowrap="nowrap" style="text-align:center;">利润</th>*@
+        </tr>
+        @if (ticketCount > 0)
+        {
+            for (int i = 0; i < ticketCount; i++)
+            {
+                var aTicketModel = Model.ticketsNumList[i]; 
+                <tr>
+                    <td>@aTicketModel.TicketNum</td>
+                    <td>@aTicketModel.CertificateIdName</td>
+                    <td>@aTicketModel.PassengerName </td>
+                    <td>@aTicketModel.CertificateNo</td>
+                    @*<td>@aTicketModel.Price</td>
+                    <td>@aTicketModel.Cost</td>
+                    <td>@aTicketModel.Profit</td>*@
+                </tr>
+            }
+        }
+    </table>
+</fieldset>
+    
+    <table class='table table-striped table-bordered table-hover' id="supplier_table">
+                <tr>
+                    @if (1 == Model.MainOrder.OrderFlug)
+                    {
+                        <th nowrap="nowrap" style="text-align:center;">总成本</th>
+                    }else if(2 == Model.MainOrder.OrderFlug){
+                        <th nowrap="nowrap" style="text-align:center;">总成本</th>
+                    }
+                    else
+                    {
+                        
+                    }
+                    <th nowrap="nowrap" style="text-align:center;">总成本</th>
+                    <th nowrap="nowrap" style="text-align: center;">票款</th>
+                    <th nowrap="nowrap" style="text-align: center;">实收款</th>
+
+                    <th nowrap="nowrap" style="text-align: center;">存入虚拟账户</th>
+
+                    <th nowrap="nowrap" style="text-align: center;">利润</th>
+                    <th nowrap="nowrap" style="text-align: center;"><label style="color:red">应付款</label></th>
+                    <th nowrap="nowrap" style="text-align: center;"><label style="color:red">应收款</label></th>
+                    <th nowrap="nowrap" style="text-align: center;">优惠</th>
+                    <th nowrap="nowrap" style="text-align: center;">返点</th>
+                    <th nowrap="nowrap" style="text-align:center"></th>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBoxFor(m => m.MainOrder.CostTotal, new { @class = "form-control", @style = "width:100%",@readonly="true"})
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.MainOrder.PricesTotal, new { @class = "form-control", @style = "width:100%", @readonly = "true" })
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.MainOrder.AlreadyReceivables, new { @class = "form-control", @style = "width:100%", @readonly = "true" })
+                    </td>
+
+
+                    <td>
+                        @*<input type="text" name="virtualMony" id="virtualMony" class="form-control" value="0" readonly />*@
+                        @Html.TextBoxFor(m => m.MainOrder.VirtualMony, new { @class = "form-control", @style = "width:100%", @readonly = "true" })
+                    </td>
+
+
+                    <td>
+                        @Html.TextBoxFor(m => m.MainOrder.TrueProfitTotal, new { @class = "form-control", @style = "width:100%", @readonly = "true" })
+                        @*@Html.TextBox("Profit")*@
+                    </td>
+                    <td>
+                        @Html.TextBox("WillPay", @Model.MainOrder.CostTotal - @Model.MainOrder.AlreadyPayment, new { @class = "form-control", @style = "width:100%;color:red;font:bold",@readonly="true"})
+                        @Html.HiddenFor(m => m.MainOrder.AlreadyPayment)
+                    </td>
+                    <td>
+                        
+                        @Html.TextBox("WillReceive", @willreceivedmoney,
+                        new { @class = "form-control", @style = "width:100%;;color:red;font:bold", @readonly = "true" })
+                        @*@Html.TextBoxFor(m => m.flightAddModel.StartTime, new { @class = "form-control", @style = "width:100%", @onkeyup = "flightTimecheck(this)" })*@
+                    </td>
+                    @if (1 == Model.MainOrder.IsTicketEnd)
+                    {
+                    <td>
+                        @Html.TextBoxFor(m => m.MainOrder.Discount, new { @class = "form-control", @style = "width:100%", @readonly="true"})
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.MainOrder.Refund, new { @class = "form-control", @style = "width:100%", @readonly="true"})
+                    </td> 
+                    }
+                    else
+                    {
+                     <td>
+                        @Html.TextBoxFor(m => m.MainOrder.Discount, new { @class = "form-control", @style = "width:100%", @onkeyup = "floatNum(this)", @onchange = "discountChange(this)", @onblur = "getDiscount(this)" })
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.MainOrder.Refund, new { @class = "form-control", @style = "width:100%", @onkeyup = "floatNum(this)", @onchange = "refundChange(this)" ,@onblur="getRefundValue(this)"})
+                    </td> 
+                    }
+                </tr>
+            </table>
+            @*<input type="hidden" name="virtualMony" id="virtualMony" value="0"/>*@
+<fieldset>
+    <legend>总成本</legend>
+    <table class='table table-striped table-bordered table-hover' id="supplier_money_table">
+        <tr>
+            <th nowrap="nowrap" style="text-align: center;">供应商</th>
+            <th nowrap="nowrap" style="text-align: center;">账户银行</th>
+            <th nowrap="nowrap" style="text-align: center;">收款账户</th>
+            <th nowrap="nowrap" style="text-align: center;">账户户主</th>
+            <th nowrap="nowrap" style="text-align: center;">金额</th>
+
+            <th nowrap="nowrap" style="text-align: center;">付款状态</th>
+            <th nowrap="nowrap" style="text-align:center">支出账户</th>
+            <th nowrap="nowrap" style="text-align:center">支出日期</th>
+            <th nowrap="nowrap" style="text-align:center"></th>
+        </tr>
+        @for (var i = 0; i < Model.OrderSuppSettlementList.Count; i++)
+        {
+            var OrderSuppSettlement = Model.OrderSuppSettlementList[i];
+            <tr>
+                <td>
+                    <input type="hidden" name="OrderSuppSettlementId" value="@OrderSuppSettlement.Id" />
+                    @Html.TextBox("SUpplierName", OrderSuppSettlement.SUpplierName, new { @class = "form-control", @id = "SUpplierName" + i, @style = "width:100%", @readonly = "true" })
+                </td>
+                <td>
+                    @Html.TextBox("AccountBank", OrderSuppSettlement.AccountBank, new { @class = "form-control", @id = "AccountBank" + i, @style = "width:100%", @readonly = "true" })
+                </td>
+                <td>
+                    @Html.TextBox("AccountNum", OrderSuppSettlement.AccountNum, new { @class = "form-control", @id = "AccountNum" + i, @style = "width:100%", @readonly = "true" })
+                </td>
+                <td>
+                    @Html.TextBox("AccountMaster", OrderSuppSettlement.AccountMaster, new { @class = "form-control", @id = "AccountMaster" + i, @style = "width:100%", @readonly = "true" })
+                </td>
+                <td>
+                    @Html.TextBox("TotalMoney", OrderSuppSettlement.TotalMoney, new { @class = "form-control", @id = "TotalMoney" + i, @style = "width:100%", @readonly = "true" })
+                </td>
+                @if (1 == OrderSuppSettlement.SettlementMarker)
+                {
+                    <td>
+                        @Html.SelectEnum(typeof(PaymentOrNot), "SettlementMarker", true, 1, new { @class = "form-control ", @disabled = "true" })
+                        @Html.Hidden("SettlementMarker",1)
+                    </td>
+                   <td>
+                       <input type="hidden" name="SettlementBankId" value="@OrderSuppSettlement.SettlementBankId" />
+                       @Html.TextBox("SettlementBankName", OrderSuppSettlement.SettlementBankName, new { @class = "form-control", @readonly = "true" })
+                   </td>
+                    <td>
+                        @Html.TextBox("SettlementDate", OrderSuppSettlement.SettlementDate, "{0:yyyy-MM-dd}", new { @class = "form-control", @readonly = "true" })
+                        <input type="hidden" name="hiddenDateMark" value="0" />
+                    </td>
+                    
+                }
+                else
+                {
+                 <td>
+                    @*@Html.TextBox("SettlementMarker", OrderSuppSettlement.SettlementMarker, new { @class = "form-control", @id = "EndTime" + i, @style = "width:100%"})*@
+                     @Html.SelectEnum(typeof(PaymentOrNot), "SettlementMarker", false, 0, new { @class = "form-control ", @id = "SettlementMarker" + i, @onchange = "selectMarker(this," + i + ")" })
+                </td>
+                <td>
+                    @Html.SelectList((IEnumerable<T_WokeeBank>)ViewBag.WokeeBankList, T_WokeeBank_Description.Id, T_WokeeBank_Description.ShortName,
+                        "SettlementBankId", true, "", null, new { @class = "form-control", @onchange = "selectShortName(this," + i + ")", @id = "SettlementBankId"+i })
+                    <input type="hidden" name="SettlementBankName" id="SettlementBankName@(i)" />
+                </td>
+                <td>
+                    @Html.TextBox("SettlementDate", OrderSuppSettlement.SettlementDate, "{0:yyyy-MM-dd}", new { @class = "form-control", @id = "SettlementDate" + i, @onfocus = "WdatePicker({dateFmt:'yyyy-MM-dd'})" })
+                    <input type="hidden" name="hiddenDateMark" value="1" />
+                </td> 
+                }
+                @*<td>
+                    @Html.TextBoxFor(m => m.OrderSuppSettlementList[i].Remark, new { @class="form-control",@readonly="true"})
+                </td>*@
+         </tr>
+        }
+    </table>
+</fieldset>
+    
+   <fieldset>
+    <legend>已收款</legend>
+       @if (1 != Model.MainOrder.IsReceived)
+       {
+        <div class="form-inline col-md-offset-11">
+           <button type="button" id="add_remark_btn" class="btn btn-default col-md-offset-1" style="margin-bottom:5px;" onclick="addNewReceive()">添加收款</button>
+       </div>
+       }
+    <table class='table table-striped table-bordered table-hover' id="receive_money_table">
+        <tr>
+        <tr>
+            <th nowrap="nowrap" style="text-align: center;width:20px">序号</th>
+            <th nowrap="nowrap" style="text-align: center;width:150px">金额</th>
+            <th nowrap="nowrap" style="text-align:center;width:150px;">收款日期</th>
+            <th nowrap="nowrap" style="text-align:center;width:300px;">收款账户</th>
+            <th nowrap="nowrap" style="text-align:center">备注</th>
+        </tr>
+        @if(receiveMoneyCount>0){
+            for (int i = 0; i < receiveMoneyCount; i++)
+            {
+                //var orderMembReceivedEntity = Model.OrderMembReceivedList[i];
+                <tr id="tr_recevie_member_money@(i)">
+                    <td>@Html.Label((i + 1).ToString())</td>
+                    <td>
+                        @*@Html.TextBoxFor(m => m.OrderMembReceivedList[i].ReceivedMoney, new { @class = "form-control", @style = "width:100%", @readonly = "true" })*@
+                        @Model.OrderMembReceivedList[i].ReceivedMoney
+                    </td>
+                    <td>
+                        @*@Html.TextBoxFor(m => m.OrderMembReceivedList[i].ReceivedDate, "{0:yyyy-MM-dd}", new { @class = "form-control", @style = "width:100%", @readonly = "true" })*@
+                        @Model.OrderMembReceivedList[i].ReceivedDate
+                    </td>
+                    <td>
+                        @*@Html.TextBoxFor(m => m.OrderMembReceivedList[i].ReceivedBankName, new { @class = "form-control", @style = "width:100%", @readonly = "true" })*@
+                        @Model.OrderMembReceivedList[i].ReceivedBankName
+                    </td>
+                    <td>
+                        @*@Html.TextBoxFor(m => m.OrderSuppSettlementList[i].Remark, new { @class="form-control",@style="width:100%",@readonly="true"})*@
+                        @Model.OrderMembReceivedList[i].Remark
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+       @Html.Hidden("hasReceiveCount", receiveMoneyCount, new { id = "hasReceiveCount" })
+</fieldset>
+}
+
+<script>
+    function floatNum(ctr) {
+        ctr.value = ctr.value.replace(/[^\d.]/g, "");
+        ctr.value = ctr.value.replace(/^\./, "");
+        ctr.value = ctr.value.replace(/\.{2,}/g, "\.");
+        ctr.value = ctr.value.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".")
+    }
+
+    function selectShortName(ctr,id) {
+        var shortnamejq = $("#SettlementBankName" + id);
+        var settlementdate_jq = $("#SettlementDate" + id);
+        var willpay_num = $("#WillPay").val();
+        var totalmoney_num = $("#TotalMoney"+id).val();
+        var settlementmark_dom = $("#SettlementMarker" + id)[0];
+        if (ctr.selectedIndex == 0) {
+            shortnamejq.val("");
+            if (0 != settlementmark_dom.selectedIndex) {
+                $("#WillPay").val(Number(willpay_num) + Number(totalmoney_num));
+                //alert("数字做加法");
+            }
+        } else {
+            
+            if ( shortnamejq.val() =="" && 0 != settlementmark_dom.selectedIndex) {
+                $("#WillPay").val(Number(willpay_num) - Number(totalmoney_num));
+            }
+            shortnamejq.val(ctr.options[ctr.selectedIndex].text);
+        }
+    }
+
+    function selectMarker(ctr, id) {
+        var willpay_num = $("#WillPay").val();
+        var totalmoney_num = $("#TotalMoney"+id).val();
+        var settletment_bankid_dom = $("#SettlementBankId" + id)[0];
+        if (0 == ctr.selectedIndex && 0 != settletment_bankid_dom.selectedIndex) {
+            $("#WillPay").val(Number(willpay_num) + Number(totalmoney_num));
+            //alert("加法");
+        } else if (1 == ctr.selectedIndex && 0 != settletment_bankid_dom.selectedIndex) {
+            $("#WillPay").val(Number(willpay_num) - Number(totalmoney_num));
+            //alert("减法");
+        }
+    }
+
+    var discount_init_value = $("#MainOrder_Discount").val();
+    function getDiscount(ctr) {
+        discount_init_value = $(ctr).val();
+    }
+
+    function discountChange(ctr) {
+        var true_profit_num = $("#MainOrder_TrueProfitTotal").val();
+        var discount_num = $(ctr).val();
+        var d_value = Number(discount_num) - Number(discount_init_value);
+        //alert(true_profit_num);
+        $("#MainOrder_TrueProfitTotal").val(Number(true_profit_num) - d_value);
+    }
+
+    var refund_init_value = $("#MainOrder_Refund").val();
+    function getRefundValue(ctr) {
+        refund_init_value = $(ctr).val();
+    }
+
+    function refundChange(ctr) {
+        var cost_total_jq = $("#MainOrder_CostTotal");
+        var already_receive_num = $("#MainOrder_AlreadyReceivables").val();
+        var true_profit_num = $("#MainOrder_TrueProfitTotal").val();
+        var refund_num = $(ctr).val();
+        var d_value = Number(refund_num) - Number(refund_init_value);
+
+        $("#MainOrder_AlreadyReceivables").val(already_receive_num - d_value);
+        $("#MainOrder_TrueProfitTotal").val(true_profit_num - d_value);
+
+        //var will_receive_num = $("#WillReceive").val();
+        //$("#WillReceive").val(will_receive_num - d_value);
+    }
+
+</script>
+
+<script>
+    $.ad.set_validator_showLabel_style(1);
+    var ad_form_check_ticketmoney = new $.ad.formA(
+    {
+        form_id: 'frm_check_ticketMoney',
+        resultCtrlId: 'show_check_ticketMoney_result',
+        template_id: 'template_check_ticketMoney_foot',
+        template_btn_id: 'btn_check_ticketmoney',
+        validatorStyle: 1
+    });
+    //$.validator.unobtrusive.parse("#frm_check_ticketMoney");
+    ad_form_check_ticketmoney.template_btn_load();
+
+    function saveOrderMoneyMessage() {
+        //ad_form_check_ticketmoney.submit();
+        submitForThisView();
+    }
+
+    function submitForThisView() {
+        var form = $("#frm_check_ticketMoney");
+        var resultCtrl = $("#show_check_ticketMoney_result");
+        ad_form_check_ticketmoney.reset_validation();
+        if (!form.valid()) {
+            return;
+        }
+
+        $.ad.wait();
+        $.post("/OrderManagement/FinancialRecordView", form.serializeArray()).done(function (datas) {
+            if (!datas.IsOK) {
+                form.validate({}).showErrors(datas.Data);
+                var msg = $.ad.isNullStr(datas.Msg) ? "操作失败" : datas.Msg;
+                ad_form_check_ticketmoney.setError(msg);
+            }
+            else {
+                var msg = $.ad.isNullStr(datas.Msg) ? "操作成功" : datas.Msg;
+                ad_form_check_ticketmoney.setSuccess(msg);
+                $("#btn_check_ticketmoney").attr("disabled", "true");
+                $("#btn_cancel_order").attr("disabled", "true");
+            }
+        }).complete(function (datas) {
+            //search_MainOrderForCService();
+            search_SaleListDetail();
+            $.unblockUI();
+        });
+    }
+
+
+    function financialCancelOrder() {
+        var content = '确认将(<strong>@Model.OrderIdZ</strong>)取消吗？';
+        var title = '订单取消';
+        $.ad.confirm(title, content, function () {
+            $.ad.wait();
+            $.post('/OrderManagement/CancelTicket', { orderId:"@Model.OrderIdZ" }).done(function (data) {
+                if (data.IsOK) {
+                    $("#btn_close_this_financialview").click();
+                    search_SaleListDetail();
+                } else {
+                    var msg = '<strong>@Model.OrderIdZ</strong>：' + data.Msg;
+                    $.ad.alertError(data.Msg);
+                }
+            }).complete(function (datas) {
+                $.unblockUI();
+            });
+        });
+    }
+</script>
+
+
+<script>
+    function findObj(theObj, theDoc) {
+        var p, i, foundObj;
+        if (!theDoc) theDoc = document;
+        if ((p = theObj.indexOf("?")) > 0 && parent.frames.length)
+        { theDoc = parent.frames[theObj.substring(p + 1)].document; theObj = theObj.substring(0, p); } if (!(foundObj = theDoc[theObj]) && theDoc.all) foundObj = theDoc.all[theObj]; for (i = 0; !foundObj && i < theDoc.forms.length; i++) foundObj = theDoc.forms[i][theObj]; for (i = 0; !foundObj && theDoc.layers && i < theDoc.layers.length; i++) foundObj = findObj(theObj, theDoc.layers[i].document); if (!foundObj && document.getElementById) foundObj = document.getElementById(theObj); return foundObj;
+    }
+
+    // 收款新增行
+    function addNewReceive() {
+        var table_dom = document.getElementById("receive_money_table");
+        if (table_dom.rows.length > 10) { return; }
+        $.ad.dialog_modal("/OrderManagement/Add_Receive/", "填写收款信息", "加载中...", function (e) {
+            var obj = $.ad.getModelValue();
+            if (null == obj || "undefinded" == obj || null == obj.WokeeBankNameS || "undefinded" == obj.WokeeBankNameS) {
+                return;
+            }
+            AddReceiveDetailRow();
+            var rowID = parseInt($("#hasReceiveCount").val() - 1);
+            $("#ReceivedMoney" + rowID).val(obj.MoneyS);
+            $("#ReceivedMoney" + rowID).parent().append(obj.MoneyS);
+
+            $("#ReceivedDate" + rowID).val(obj.ReceiveDateS);
+            $("#ReceivedDate" + rowID).parent().append(obj.ReceiveDateS);
+
+            $("#ReceivedBankId" + rowID).val(obj.WokeeBankIdS);
+
+            $("#ReceivedBankName" + rowID).val(obj.WokeeBankNameS);
+            $("#ReceivedBankName" + rowID).parent().append(obj.WokeeBankNameS);
+
+            $("#ReceivedRemark" + rowID).val(obj.RemarkS)
+            $("#ReceivedRemark" + rowID).parent().append(obj.RemarkS);
+
+            $.ad.setModelValue(null);
+
+            var already_receive_money_init = $("#MainOrder_AlreadyReceivables").val();
+            var fare_all_money_init = $("#MainOrder_PricesTotal").val();
+            $("#MainOrder_AlreadyReceivables").val(Number(obj.MoneyS) + Number(already_receive_money_init));
+            var already_receive_money_after = $("#MainOrder_AlreadyReceivables").val();
+            var will_receive_money_init = $("#WillReceive").val();
+
+            if(Number(will_receive_money_init)>Number(obj.MoneyS)){
+                $("#WillReceive").val(Number(will_receive_money_init) - Number(obj.MoneyS));
+                var will_receive_money_after = $("#WillReceive").val();
+            } else {
+                $("#WillReceive").val(0);
+                var actual_get_money = Number(already_receive_money_after) + Number($("#MainOrder_Discount").val()) + Number($("#MainOrder_Refund").val());
+                var virtual_init = $("#MainOrder_VirtualMony").val();
+                var d_value = Number(actual_get_money) - Number(fare_all_money_init);
+                $("#MainOrder_AlreadyReceivables").val(Number(already_receive_money_after) - Number(d_value));
+                $("#MainOrder_VirtualMony").val(Number(d_value) + Number(virtual_init));
+            }
+
+            //if (Number(fare_all_money_init) - Number(already_receive_money_after) >= 0) {
+            //    $("#WillReceive").val(Number(fare_all_money_init) - Number(already_receive_money_after));
+            //} else {
+            //    $("#WillReceive").val(0);
+            //    var virtual_init = $("#virtualMony").val();
+            //    var d_value = Number(already_receive_money_after) - Number(fare_all_money_init);
+            //    $("#MainOrder_AlreadyReceivables").val(Number(fare_all_money_init));
+            //    $("#virtualMony").val(d_value + Number(virtual_init));
+            //}
+
+
+            //var already_receive_money_finally = $("#MainOrder_AlreadyReceivables").val();
+            //var cost_total = $("#MainOrder_CostTotal").val();
+            //$("#MainOrder_TrueProfitTotal").val(Number(already_receive_money_finally) - Number(cost_total));
+        });
+        // $.validator.unobtrusive.parse("#frm_Modify_Ticket");
+    }
+
+    // 在 已收款 表中添加一条记录
+    function AddReceiveDetailRow() {
+        var flightLastIndex = findObj("hasReceiveCount", document);
+        var rowID = parseInt(flightLastIndex.value);
+
+        var signFrame = findObj("receive_money_table", document);
+        //添加行
+        var newTR = signFrame.insertRow(signFrame.rows.length);
+        newTR.id = "tr_recevie_member_money" + rowID;
+
+        //添加列:序号
+        var newNameTD = newTR.insertCell(0);
+        //添加列内容
+        newNameTD.innerHTML = (newTR.rowIndex-1).toString();
+
+        //添加列:金额
+        var newNameMoney = newTR.insertCell(1);
+        //newNameMoney.innerHTML = "<input name='ReceivedMoney' class='form-control' style='width:100%' id='ReceivedMoney" + rowID + "' readonly='true'/>"
+        newNameMoney.innerHTML = "<input type='hidden' name='ReceivedMoney' class='form-control' style='width:100%' id='ReceivedMoney" + rowID + "' readonly='true'/>";
+
+        //添加列:日期
+        var newDate = newTR.insertCell(2);
+        //newDate.innerHTML = "<input name='ReceivedDate' class='form-control' style='width:100%' id='ReceivedDate" + rowID + "' readonly='true'/>"
+        newDate.innerHTML = "<input type='hidden' name='ReceivedDate' class='form-control' style='width:100%' id='ReceivedDate" + rowID + "' readonly='true'/>";
+
+        //添加列:收款账户
+        var newAccountName = newTR.insertCell(3);
+        //newAccountName.innerHTML = "<input name='ReceivedBankName' class='form-control' style='width:100%' id='ReceivedBankName" + rowID + "' readonly='true'/>"
+        newAccountName.innerHTML = "<input type='hidden' name='ReceivedBankName' class='form-control' style='width:100%' id='ReceivedBankName" + rowID + "' readonly='true'/>";
+
+        // 添加列:备注
+        var newRemark = newTR.insertCell(4);
+        //newRemark.innerHTML = "<input name='ReceivedRemark' class='form-control' style='width:100%' id='ReceivedRemark" + rowID + "' readonly='true'/>"
+        newRemark.innerHTML = "<input  type='hidden' name='ReceivedRemark' class='form-control' style='width:100%' id='ReceivedRemark" + rowID + "' readonly='true'/>"
+
+        $(newTR).append("<input type='hidden' id='ReceivedBankId" + rowID + "' name='ReceivedBankId'/>");
+        //将行号推进下一行
+        flightLastIndex.value = (rowID + 1).toString();
+    }
+
+</script>

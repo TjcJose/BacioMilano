@@ -1,0 +1,50 @@
+2014-09-09 13:57:22,612 [12984] - 
+excel export error
+System.IO.FileNotFoundException: 未能找到文件“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\ManagerExpenditure.xls”。
+文件名:“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\ManagerExpenditure.xls”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 Ad.Web.Controllers.ManagerExpenditureController.ManagerExpenditureExport(VModel_ManagerExpenditureList model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\ManagerExpenditureController.cs:行号 224
+
+2014-09-09 14:58:34,118 [13592] - 
+excel export error
+System.IO.FileNotFoundException: 未能找到文件“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\MemberPrePayment.xls”。
+文件名:“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\MemberPrePayment.xls”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 Ad.Web.Controllers.MemberPrePaymentController.MemberPrePaymentExport(VModel_MemberPrePaymentList model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\MemberPrePaymentController.cs:行号 157
+
+2014-09-09 15:00:01,490 [5664] - 
+excel export error
+System.IO.FileNotFoundException: 未能找到文件“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\MemberPrePayment.xls”。
+文件名:“D:\zzj\Code2\wokee\Code2\Ad.WebAdmin\ExcelTemplate\MemberPrePayment.xls”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 Ad.Web.Controllers.MemberPrePaymentController.MemberPrePaymentExport(VModel_MemberPrePaymentList model) 位置 d:\zzj\Code2\wokee\Code2\Ad.WebAdmin\Controllers\MemberPrePaymentController.cs:行号 157
+
+            //Console.Read();
+            //string originalContext = "中国万岁";
+            //string finallyContext = HttpUtility.UrlEncode(originalContext, Encoding.GetEncoding("gbk"));
+            //string Url = @"http://hl.my2my.cn/sms/push_mt.jsp?cpid=BAIDU&cppwd=123456&phone=13811978407&spnumber=&msgcont=" + finallyContext + @"&extend=01234";
+
+            //string paramStr = @"cpid=BAIDU&cppwd=123456&phone=13811978407&spnumber=&msgcont=test&extend=01234";
+            //string finallyparamStr = HttpUtility.UrlEncode(paramStr, Encoding.GetEncoding("gbk"));
+            //string Url2 = @"http://hl.my2my.cn/sms/push_mt.jsp?" + finallyparamStr;
+
+            //HttpWebRequest request = WebRequest.Create(Url) as HttpWebRequest;
+           
+            //using (WebResponse response = request.GetResponse())
+            //{
+            //    using (Stream sr = response.GetResponseStream())
+            //    {
+            //        using (StreamReader reader = new StreamReader(sr,Encoding.GetEncoding("gbk")))
+            //        {
+            //            string result = reader.ReadToEnd();
+            //            Console.Write(result);
+            //            Console.Read();
+            //        }
+            //    }
+            //}

@@ -1,0 +1,10 @@
+D:\zzj\Code2\dll\Ad.Tools.dll
+D:\zzj\Code2\dll\Ad.Tools.pdb
+D:\zzj\Code2\Ad.Tools\obj\Release\Ad.Tools.csprojResolveAssemblyReference.cache
+D:\zzj\Code2\Ad.Tools\obj\Release\Ad.Tools.dll
+D:\zzj\Code2\Ad.Tools\obj\Release\Ad.Tools.pdb
+D:\zzj\Code2\wokee\Code2\dll\Ad.Tools.dll
+D:\zzj\Code2\wokee\Code2\dll\Ad.Tools.pdb
+D:\zzj\Code2\wokee\Code2\Ad.Tools\obj\Release\Ad.Tools.csprojResolveAssemblyReference.cache
+D:\zzj\Code2\wokee\Code2\Ad.Tools\obj\Release\Ad.Tools.dll
+D:\zzj\Code2\wokee\Code2\Ad.Tools\obj\Release\Ad.Tools.pdb
